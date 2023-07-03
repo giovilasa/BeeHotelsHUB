@@ -16,13 +16,6 @@ public class ButtonManagerUI : MonoBehaviour
     {
         SecondUI.SetActive(false);
     }
-
-    public void HandleButtonClick()
-    {
-        Debug.Log("Il pulsante è stato cliccato!");
-        // Aggiungi qui la logica che desideri eseguire quando il pulsante viene cliccato
-    }
-
     public void OnButtonClick()
     {
         isSecondUIVisible = !isSecondUIVisible; // Switch visibility state of SecondUI
