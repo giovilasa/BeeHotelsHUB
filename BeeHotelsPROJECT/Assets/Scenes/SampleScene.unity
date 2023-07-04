@@ -23597,7 +23597,7 @@ Transform:
   m_GameObject: {fileID: 1147935516}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 2.5, y: 1.3, z: 1.1}
+  m_LocalScale: {x: 2.4, y: 1.5, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1547253151}
@@ -26407,10 +26407,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStart: 0
   isQuit: 1
-  MainCamera: {fileID: 0}
-  MainLight: {fileID: 0}
-  StartCamera: {fileID: 0}
-  StartLight: {fileID: 0}
+  MainCamera: {fileID: 963194227}
+  MainLight: {fileID: 705507994}
+  StartCamera: {fileID: 2013285998}
+  StartLight: {fileID: 427646520}
 --- !u!1001 &1269511809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32275,7 +32275,6 @@ GameObject:
   - component: {fileID: 1547253153}
   - component: {fileID: 1547253152}
   - component: {fileID: 1547253155}
-  - component: {fileID: 1547253154}
   - component: {fileID: 1547253157}
   - component: {fileID: 1547253156}
   m_Layer: 0
@@ -32439,22 +32438,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1547253154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547253150}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babff8ae7d7fd5648b9a73973cf4def0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCamera: {fileID: 963194227}
-  MainLight: {fileID: 705507994}
-  StartCamera: {fileID: 2013285998}
-  StartLight: {fileID: 427646520}
 --- !u!114 &1547253155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32499,21 +32482,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1547253154}
+      - m_Target: {fileID: 1547253150}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: SwitchCamera
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1547253154}
-        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: SwitchLight
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
