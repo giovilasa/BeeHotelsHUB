@@ -22,7 +22,7 @@ public class StartMenu : MonoBehaviour
         StartCamera.gameObject.SetActive(true);
     }
 
-    void OnMouseUp()
+    public void OnMouseUp()
     {
         if (isStart)
         {
