@@ -9,9 +9,8 @@ public class CameraMovement : MonoBehaviour
     public float zoomSpeed; // Camera Zoom speed
 
     public Vector3 defaultPosition = new Vector3(-251.9f, 18.8f, 21.4f); // default position camera
-    public Vector2 minBoundsXY = new Vector2(-300f, 0f);
-    public Vector2 maxBoundsXY = new Vector2(0f, 30f);
-    public Vector2 minMaxBoundsZ = new Vector2(-27f, 21.4f);
+    public Vector3 minBounds = new Vector3(-10f, -5f, -10f); // Limiti minimi di movimento della telecamera
+    public Vector3 maxBounds = new Vector3(10f, 5f, 10f); // Limiti massimi di movimento della telecamera
 
     private bool isMovingCamera = false;
     private Vector3 lastMousePosition;
@@ -25,6 +24,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Movimento della telecamera sugli assi X e Z
         if (Input.GetMouseButtonDown(1))
         {
             isMovingCamera = true;
@@ -38,23 +38,22 @@ public class CameraMovement : MonoBehaviour
         if (isMovingCamera)
         {
             Vector3 mouseDelta = Input.mousePosition - lastMousePosition;
-            Vector3 movement = new Vector3(mouseDelta.x, mouseDelta.y, 0f) * movementSpeed * Time.deltaTime;
+            Vector3 movement = new Vector3(mouseDelta.x, 0f, mouseDelta.y) * movementSpeed * Time.deltaTime;
             Vector3 newPosition = transform.position + movement;
-            newPosition.x = Mathf.Clamp(newPosition.x, minBoundsXY.x, maxBoundsXY.x);
-            newPosition.y = Mathf.Clamp(newPosition.y, minBoundsXY.y, maxBoundsXY.y);
-            newPosition.z = Mathf.Clamp(newPosition.z, minMaxBoundsZ.x, minMaxBoundsZ.y);
+            newPosition.x = Mathf.Clamp(newPosition.x, minBounds.x, maxBounds.x);
+            newPosition.y = Mathf.Clamp(newPosition.y, minBounds.y, maxBounds.y);
+            newPosition.z = Mathf.Clamp(newPosition.z, minBounds.z, maxBounds.z);
             transform.position = newPosition;
 
             lastMousePosition = Input.mousePosition;
         }
 
-        // Camera Zoom
+        // Movimento della telecamera lungo l'asse Y
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        Vector3 zoom = scroll * zoomSpeed * Time.deltaTime * transform.forward;
-        transform.Translate(zoom, Space.World);
-
-
-
+        Vector3 scrollMovement = Vector3.up * scroll * zoomSpeed * Time.deltaTime;
+        Vector3 newYPosition = transform.position + scrollMovement;
+        newYPosition.y = Mathf.Clamp(newYPosition.y, minBounds.y, maxBounds.y);
+        transform.position = newYPosition;
     }
 }
 
