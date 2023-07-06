@@ -6287,11 +6287,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 16N-BeeHotel
@@ -8202,11 +8202,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 24S-BeeHotel
@@ -9430,11 +9430,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 08B-BeeHotel
@@ -10306,11 +10306,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 15C-BeeHotel
@@ -10904,11 +10904,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 15D-BeeHotel
@@ -13163,11 +13163,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 02F-BeeHotel
@@ -13481,11 +13481,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 22M-BeeHotel
@@ -22812,11 +22812,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 17M-BeeHotel
@@ -25728,8 +25728,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d0e55f16d400fd447ac0afaddecaa3ca, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26283,11 +26282,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 24F-BeeHotel
@@ -34195,11 +34194,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 15E-BeeHotel
@@ -35664,11 +35663,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 14D-BeeHotel
@@ -38243,11 +38242,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 14E-BeeHotel
@@ -38446,11 +38445,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 04V-BeeHotel
@@ -41727,11 +41726,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 07A-BeeHotel
@@ -48281,11 +48280,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -1796466918861019720, guid: 93f694b11af07664a8991560878b83b2, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: -7511558181221131132, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 6095931263392676539, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
+      objectReference: {fileID: 2100000, guid: 5ddc37d50a981c64bae88d4021f570af, type: 2}
     - target: {fileID: 919132149155446097, guid: 01d1e01875761b64ab1ecd4988332607, type: 3}
       propertyPath: m_Name
       value: 14C-BeeHotel
