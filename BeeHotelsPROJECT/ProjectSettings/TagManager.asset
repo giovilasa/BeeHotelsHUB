@@ -9,11 +9,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GameElements
   - Water
   - UI
-  - 
-  - 
+  - MainUI
+  - Hotels&Ristoranti
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 2321862347
+    locked: 0
+  - name: 2
+    uniqueID: 1891822503
     locked: 0
