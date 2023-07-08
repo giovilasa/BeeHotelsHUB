@@ -13,6 +13,8 @@ public class StartMenu : MonoBehaviour
     public Camera StartCamera;
     public Light StartLight;
 
+    public GameObject StartBackground;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class StartMenu : MonoBehaviour
             MainCamera.gameObject.SetActive(!MainCamera.gameObject.activeSelf);
             StartLight.gameObject.SetActive(!StartLight.gameObject.activeSelf);
             MainLight.gameObject.SetActive(!MainLight.gameObject.activeSelf);
+            StartBackground.gameObject.SetActive(!StartBackground.gameObject.activeSelf);
         }
         if (isQuit)
         {

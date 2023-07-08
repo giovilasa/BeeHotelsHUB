@@ -16,10 +16,10 @@ public class ReturnButton : MonoBehaviour
     }
     public void OnButtonClick()
     {
-        isBackUIVisible = !isBackUIVisible; // 
-        BackUI.SetActive(isBackUIVisible); // 
-        isCurrUIVisible = !isCurrUIVisible; // 
-        CurrUI.SetActive(isCurrUIVisible); // 
+        isBackUIVisible = !isBackUIVisible; 
+        BackUI.SetActive(isBackUIVisible); 
+        isCurrUIVisible = !isCurrUIVisible; 
+        CurrUI.SetActive(isCurrUIVisible); 
     }
 
     // Update is called once per frame
