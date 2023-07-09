@@ -9,7 +9,7 @@ public class ButtonManagerUI : MonoBehaviour
     public GameObject MainUI;
     public GameObject SecondUI;
     private bool isSecondUIVisible = false;
-    private bool isMainUIVisible = true;
+    //private bool isMainUIVisible = true;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +18,23 @@ public class ButtonManagerUI : MonoBehaviour
     }
     public void OnButtonClick()
     {
-        isSecondUIVisible = !isSecondUIVisible; // Switch visibility state of SecondUI
-        SecondUI.SetActive(isSecondUIVisible); // Sets the visibility of SecondUI based on the value of the variable
-        isMainUIVisible = !isMainUIVisible; // Switch visibility state of MainUI
-        MainUI.SetActive(isMainUIVisible); // Sets the visibility of MainUI based on the value of the variable
+        if (isSecondUIVisible)
+        {
+            // Mostra MainUI e nascondi SecondUI
+            MainUI.SetActive(true);
+            //isMainUIVisible = true;
+            SecondUI.SetActive(false);
+            isSecondUIVisible = false;
+        }
+        else
+        {
+            // Mostra SecondUI e nascondi MainUI
+            MainUI.SetActive(false);
+            //isMainUIVisible = false;
+            SecondUI.SetActive(true);
+            isSecondUIVisible = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
