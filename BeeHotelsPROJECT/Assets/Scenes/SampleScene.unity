@@ -7730,8 +7730,8 @@ RectTransform:
   m_GameObject: {fileID: 331843208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.36, y: 0.89, z: 1.4399999}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 1.05, z: 1.9999998}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 802810550}
   m_RootOrder: 0
@@ -7739,7 +7739,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 39.1}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 157.71, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331843210
 MonoBehaviour:
@@ -17697,7 +17697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4.21, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687022906
@@ -17720,7 +17720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 074ca10e6f46fa347a4fcc0ea7f42a65, type: 3}
+  m_Texture: {fileID: 2800000, guid: c61241f9d202ce44a884c1c299a17fed, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -32801,7 +32801,7 @@ GameObject:
   - component: {fileID: 1166398673}
   - component: {fileID: 1166398676}
   m_Layer: 5
-  m_Name: Return
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32816,15 +32816,15 @@ RectTransform:
   m_GameObject: {fileID: 1166398670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.125}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2080949167}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -656, y: -308}
+  m_AnchoredPosition: {x: -150, y: -118}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166398673
@@ -32903,7 +32903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 93db1faa3d5d33e46a0dcbdeb88334dc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9549dd50fee579d46a539f605a4665ba, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
