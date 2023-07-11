@@ -29,5 +29,6 @@ public class IImageScrollHandler : MonoBehaviour
             images[i].SetActive(i == imageIndex);
         }
     }
+
 }
 
