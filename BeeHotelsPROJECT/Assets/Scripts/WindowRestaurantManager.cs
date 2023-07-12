@@ -6,16 +6,42 @@ using UnityEngine.UI;
 public class WindowRestaurantManager : MonoBehaviour
 {
     public GameObject windowCanvas;
-    public Button button;
+    public GameObject falseRestaurant;
+    public GameObject trueRestaurant;
+    //public bool interactable;
+    public Button[] buttonsToMonitor;
 
     // Start is called before the first frame update
-    void Awake()
+    private void Start()
     {
-        CloseWindow();
-        Button button = GetComponent<Button>();
-        if (button != null)
+        trueRestaurant.gameObject.SetActive(false);
+        falseRestaurant.gameObject.SetActive(true);
+
+        foreach (Button button in buttonsToMonitor)
         {
-            button.interactable = false;
+            button.onClick.AddListener(OnButtonPressed);
+        }
+
+    }
+
+    private void OnButtonPressed()
+    {
+        bool allButtonsPressed = true;
+
+        foreach (Button button in buttonsToMonitor)
+        {
+            if (!button.interactable)
+            {
+                allButtonsPressed = false;
+                break;
+            }
+        }
+
+        if (allButtonsPressed)
+        {
+            // Apparizione dell'oggetto nella scena
+            trueRestaurant.gameObject.SetActive(true);
+            falseRestaurant.gameObject.SetActive(false);
         }
     }
 
