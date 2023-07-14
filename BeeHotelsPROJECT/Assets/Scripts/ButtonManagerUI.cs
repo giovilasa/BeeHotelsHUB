@@ -21,12 +21,12 @@ public class ButtonManagerUI : MonoBehaviour
     {
         // Add button click listeners
         showAllButton.onClick.AddListener(() => ShowCard(bomboCard, true));
-        bomboButton.onClick.AddListener(() => ShowCard(bomboCard, true));
+        bomboButton.onClick.AddListener(() => ShowCard(bomboCard));
         cardatriceButton.onClick.AddListener(() => ShowCard(cardatriceCard));
         muratriceButton.onClick.AddListener(() => ShowCard(muratriceCard));
         tagliafoglieButton.onClick.AddListener(() => ShowCard(tagliafoglieCard));
-
     }
+
     public void ShowCard(GameObject cardToShow, bool showAll = false)
     {
         bomboCard.SetActive(showAll || cardToShow == bomboCard);
