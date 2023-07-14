@@ -2894,7 +2894,6 @@ GameObject:
   - component: {fileID: 82627114}
   - component: {fileID: 82627113}
   - component: {fileID: 82627116}
-  - component: {fileID: 82627115}
   m_Layer: 5
   m_Name: ButtonPRENDI
   m_TagString: Untagged
@@ -2958,20 +2957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82627111}
   m_CullTransparentMesh: 1
---- !u!114 &82627115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82627111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b518f0c87f88184883c219a9082551d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrWindow: {fileID: 1696081928}
-  NewWindow: {fileID: 468402863}
 --- !u!114 &82627116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3015,19 +3000,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 82627113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 82627115}
-        m_TargetAssemblyTypeName: ButtonManager2, Assembly-CSharp
-        m_MethodName: OnMouseDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &84783402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5723,7 +5696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 708378430}
-  prevWindow: []
 --- !u!114 &143016774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10648,7 +10620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 2080949166}
-  prevWindow: []
 --- !u!114 &274041148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12665,7 +12636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 329167847}
-  prevWindow: []
 --- !u!135 &330133378
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13421,7 +13391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 1174879145}
-  prevWindow: []
 --- !u!1 &338365745
 GameObject:
   m_ObjectHideFlags: 0
@@ -21364,7 +21333,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 55758678}
-  prevWindow: []
 --- !u!1001 &527624470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33254,7 +33222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 1174879145}
-  prevWindow: []
 --- !u!114 &834984095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35552,7 +35519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 888806290}
-  prevWindow: []
 --- !u!135 &888806297
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -37911,7 +37877,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 958971205}
-  prevWindow: []
 --- !u!135 &958971212
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38214,6 +38179,14 @@ MonoBehaviour:
   defaultPosition: {x: -251.9, y: 18.8, z: 21.4}
   minBounds: {x: -270, y: 12, z: 22}
   maxBounds: {x: -242, y: 20, z: 45}
+  blockMovementObjects:
+  - {fileID: 328713239}
+  - {fileID: 2080949166}
+  - {fileID: 468402863}
+  - {fileID: 84783402}
+  - {fileID: 1174879145}
+  - {fileID: 55758678}
+  - {fileID: 1696081928}
 --- !u!82 &963194230
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43445,7 +43418,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 328713239}
-  prevWindow: []
 --- !u!114 &1079815712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43859,7 +43831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 84783402}
-  prevWindow: []
 --- !u!114 &1085022864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47489,7 +47460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 2080949166}
-  prevWindow: []
 --- !u!1001 &1168600100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47633,8 +47603,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 328713239}
-  prevWindow:
-  - {fileID: 0}
 --- !u!135 &1168600108
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52641,7 +52609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 1696081928}
-  prevWindow: []
 --- !u!114 &1279534355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53616,7 +53583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 1190197904}
-  prevWindow: []
 --- !u!1001 &1311416599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56590,7 +56556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 468402863}
-  prevWindow: []
 --- !u!114 &1371624444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57345,7 +57310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 55758678}
-  prevWindow: []
 --- !u!1001 &1384592064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59312,8 +59276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 328713239}
-  prevWindow:
-  - {fileID: 263987469}
 --- !u!65 &1428742748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69324,6 +69286,7 @@ GameObject:
   - component: {fileID: 1650021402}
   - component: {fileID: 1650021404}
   - component: {fileID: 1650021403}
+  - component: {fileID: 1650021405}
   m_Layer: 5
   m_Name: Pollen_Actual
   m_TagString: Untagged
@@ -69448,6 +69411,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650021401}
   m_CullTransparentMesh: 1
+--- !u!114 &1650021405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650021401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfce291be6ea0db42aae3636422da99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1650021403}
+  day3Button: {fileID: 1864774402}
+  activityButton: {fileID: 1037875863}
 --- !u!1001 &1651355947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70123,6 +70101,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659504091}
+  m_CullTransparentMesh: 1
+--- !u!1 &1659858315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659858316}
+  - component: {fileID: 1659858318}
+  - component: {fileID: 1659858317}
+  m_Layer: 5
+  m_Name: Attesa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1659858316
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659858315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1937185608}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1659858317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659858315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Attendi un giorno per prendere un altro rinforzo
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 404a4d550ac82c04e800d92fd9437198, type: 2}
+  m_sharedMaterial: {fileID: -2142862935871385616, guid: 404a4d550ac82c04e800d92fd9437198, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 22
+  m_fontSizeBase: 22
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 9.756653, y: -32.449947, z: 8.607487, w: -32.48451}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1659858318
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659858315}
   m_CullTransparentMesh: 1
 --- !u!1001 &1660117259
 PrefabInstance:
@@ -71376,7 +71489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 84783402}
-  prevWindow: []
 --- !u!1001 &1695852427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71457,7 +71569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1696081929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71475,6 +71587,7 @@ RectTransform:
   - {fileID: 311217671}
   - {fileID: 1279534353}
   - {fileID: 82627112}
+  - {fileID: 1937185608}
   m_Father: {fileID: 1910087367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78153,7 +78266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 328713239}
-  prevWindow: []
 --- !u!114 &1836837137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80405,6 +80517,10 @@ MonoBehaviour:
   trueRestaurant: {fileID: 114995249}
   buttonsToMonitor:
   - {fileID: 106391243}
+  additionalButton: {fileID: 82627116}
+  day3Button: {fileID: 1864774402}
+  waitingObject: {fileID: 1937185607}
+  newWindow: {fileID: 468402863}
 --- !u!1001 &1911205616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81474,6 +81590,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936309512}
+  m_CullTransparentMesh: 1
+--- !u!1 &1937185607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1937185608}
+  - component: {fileID: 1937185610}
+  - component: {fileID: 1937185609}
+  m_Layer: 5
+  m_Name: AttesaText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1937185608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937185607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 1.5, z: 1.25}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1659858316}
+  m_Father: {fileID: 1696081929}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1937185609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937185607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 27af2025cb6e95c498576206fce35589, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1937185610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937185607}
   m_CullTransparentMesh: 1
 --- !u!1001 &1937210011
 PrefabInstance:
@@ -83609,7 +83799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 200311191}
-  prevWindow: []
 --- !u!135 &1999657663
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -89723,7 +89912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowCanvas: {fileID: 2131612929}
-  prevWindow: []
 --- !u!1001 &2132005606
 PrefabInstance:
   m_ObjectHideFlags: 0

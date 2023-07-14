@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-
     public float movementSpeed; // Camera speed
     public float zoomSpeed; // Camera Zoom speed
 
@@ -15,6 +14,9 @@ public class CameraMovement : MonoBehaviour
     private bool isMovingCamera = false;
     private Vector3 lastMousePosition;
 
+    public GameObject[] blockMovementObjects; // Oggetti che bloccano il movimento della telecamera
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +26,19 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if any blockMovementObjects are active
+        bool shouldBlockMovement = false;
+        foreach (GameObject obj in blockMovementObjects)
+        {
+            if (obj.activeSelf)
+            {
+                shouldBlockMovement = true;
+                break;
+            }
+        }
+
         // Movimento della telecamera sugli assi X e Z
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !shouldBlockMovement)
         {
             isMovingCamera = true;
             lastMousePosition = Input.mousePosition;
@@ -35,7 +48,7 @@ public class CameraMovement : MonoBehaviour
             isMovingCamera = false;
         }
 
-        if (isMovingCamera)
+        if (isMovingCamera && !shouldBlockMovement)
         {
             Vector3 mouseDelta = Input.mousePosition - lastMousePosition;
             Vector3 movement = new Vector3(mouseDelta.x, 0f, mouseDelta.y) * movementSpeed * Time.deltaTime;
@@ -49,11 +62,14 @@ public class CameraMovement : MonoBehaviour
         }
 
         // Movimento della telecamera lungo l'asse Y
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        Vector3 scrollMovement = Vector3.up * scroll * zoomSpeed * Time.deltaTime;
-        Vector3 newYPosition = transform.position + scrollMovement;
-        newYPosition.y = Mathf.Clamp(newYPosition.y, minBounds.y, maxBounds.y);
-        transform.position = newYPosition;
+        if (!shouldBlockMovement)
+        {
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+            Vector3 scrollMovement = Vector3.up * scroll * zoomSpeed * Time.deltaTime;
+            Vector3 newYPosition = transform.position + scrollMovement;
+            newYPosition.y = Mathf.Clamp(newYPosition.y, minBounds.y, maxBounds.y);
+            transform.position = newYPosition;
+        }
     }
 }
 
