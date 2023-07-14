@@ -45922,7 +45922,7 @@ MonoBehaviour:
   menus:
   - {fileID: 641575049}
   - {fileID: 185904186}
-  initialMenu: {fileID: 185904186}
+  initialMenu: {fileID: 641575049}
 --- !u!114 &1130469477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45935,8 +45935,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756716f46306d147a801561a270e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 185904186}
-  SecondUI: {fileID: 641575049}
+  bomboCard: {fileID: 416303784}
+  cardatriceCard: {fileID: 1852217363}
+  muratriceCard: {fileID: 2054293669}
+  tagliafoglieCard: {fileID: 1464348186}
+  showAllButton: {fileID: 1411781010}
+  bomboButton: {fileID: 2044126708}
+  cardatriceButton: {fileID: 1130469478}
+  muratriceButton: {fileID: 1360270699}
+  tagliafoglieButton: {fileID: 1217546506}
 --- !u!114 &1130469478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50095,7 +50102,7 @@ MonoBehaviour:
   menus:
   - {fileID: 641575049}
   - {fileID: 738544991}
-  initialMenu: {fileID: 738544991}
+  initialMenu: {fileID: 641575049}
 --- !u!114 &1217546505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50108,8 +50115,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756716f46306d147a801561a270e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 738544991}
-  SecondUI: {fileID: 641575049}
+  bomboCard: {fileID: 416303784}
+  cardatriceCard: {fileID: 1852217363}
+  muratriceCard: {fileID: 2054293669}
+  tagliafoglieCard: {fileID: 1464348186}
+  showAllButton: {fileID: 1411781010}
+  bomboButton: {fileID: 2044126708}
+  cardatriceButton: {fileID: 1130469478}
+  muratriceButton: {fileID: 1360270699}
+  tagliafoglieButton: {fileID: 1217546506}
 --- !u!114 &1217546506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56065,7 +56079,7 @@ MonoBehaviour:
   menus:
   - {fileID: 641575049}
   - {fileID: 59489240}
-  initialMenu: {fileID: 59489240}
+  initialMenu: {fileID: 641575049}
 --- !u!114 &1360270698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56078,8 +56092,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756716f46306d147a801561a270e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 59489240}
-  SecondUI: {fileID: 641575049}
+  bomboCard: {fileID: 416303784}
+  cardatriceCard: {fileID: 1852217363}
+  muratriceCard: {fileID: 2054293669}
+  tagliafoglieCard: {fileID: 1464348186}
+  showAllButton: {fileID: 1411781010}
+  bomboButton: {fileID: 2044126708}
+  cardatriceButton: {fileID: 1130469478}
+  muratriceButton: {fileID: 1360270699}
+  tagliafoglieButton: {fileID: 1217546506}
 --- !u!114 &1360270699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58636,8 +58657,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756716f46306d147a801561a270e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 1423886845}
-  SecondUI: {fileID: 641575049}
+  bomboCard: {fileID: 416303784}
+  cardatriceCard: {fileID: 1852217363}
+  muratriceCard: {fileID: 2054293669}
+  tagliafoglieCard: {fileID: 1464348186}
+  showAllButton: {fileID: 1411781010}
+  bomboButton: {fileID: 2044126708}
+  cardatriceButton: {fileID: 1130469478}
+  muratriceButton: {fileID: 1360270699}
+  tagliafoglieButton: {fileID: 1217546506}
 --- !u!114 &1411781010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58744,7 +58772,7 @@ MonoBehaviour:
   menus:
   - {fileID: 1423886845}
   - {fileID: 641575049}
-  initialMenu: {fileID: 1423886845}
+  initialMenu: {fileID: 641575049}
 --- !u!1 &1412762549
 GameObject:
   m_ObjectHideFlags: 0
@@ -86156,8 +86184,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756716f46306d147a801561a270e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainUI: {fileID: 1423886845}
-  SecondUI: {fileID: 641575049}
+  bomboCard: {fileID: 416303784}
+  cardatriceCard: {fileID: 1852217363}
+  muratriceCard: {fileID: 2054293669}
+  tagliafoglieCard: {fileID: 1464348186}
+  showAllButton: {fileID: 1411781010}
+  bomboButton: {fileID: 2044126708}
+  cardatriceButton: {fileID: 1130469478}
+  muratriceButton: {fileID: 1360270699}
+  tagliafoglieButton: {fileID: 1217546506}
 --- !u!114 &2044126708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86201,19 +86236,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2044126709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2044126707}
-        m_TargetAssemblyTypeName: ButtonManagerUI, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2044126709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86286,7 +86309,7 @@ MonoBehaviour:
   menus:
   - {fileID: 641575049}
   - {fileID: 1423886845}
-  initialMenu: {fileID: 1423886845}
+  initialMenu: {fileID: 641575049}
 --- !u!1001 &2045568317
 PrefabInstance:
   m_ObjectHideFlags: 0

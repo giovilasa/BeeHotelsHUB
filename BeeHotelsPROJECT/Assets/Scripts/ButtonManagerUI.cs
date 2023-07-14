@@ -5,36 +5,35 @@ using UnityEngine.UI;
 
 public class ButtonManagerUI : MonoBehaviour
 {
-    //public Button MainMenu;//
-    public GameObject MainUI;
-    public GameObject SecondUI;
-    private bool isSecondUIVisible = true;
-    //private bool isMainUIVisible = true;
+    public GameObject bomboCard;
+    public GameObject cardatriceCard;
+    public GameObject muratriceCard;
+    public GameObject tagliafoglieCard;
+
+    public Button showAllButton;
+    public Button bomboButton;
+    public Button cardatriceButton;
+    public Button muratriceButton;
+    public Button tagliafoglieButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        SecondUI.SetActive(true);
+        // Add button click listeners
+        showAllButton.onClick.AddListener(() => ShowCard(bomboCard, true));
+        bomboButton.onClick.AddListener(() => ShowCard(bomboCard, true));
+        cardatriceButton.onClick.AddListener(() => ShowCard(cardatriceCard));
+        muratriceButton.onClick.AddListener(() => ShowCard(muratriceCard));
+        tagliafoglieButton.onClick.AddListener(() => ShowCard(tagliafoglieCard));
+
     }
-    public void OnButtonClick()
+    public void ShowCard(GameObject cardToShow, bool showAll = false)
     {
-        if (isSecondUIVisible)
-        {
-            // Mostra MainUI e nascondi SecondUI
-            MainUI.SetActive(true);
-            //isMainUIVisible = true;
-            SecondUI.SetActive(false);
-            isSecondUIVisible = false;
-        }
-        else
-        {
-            // Mostra SecondUI e nascondi MainUI
-            MainUI.SetActive(false);
-            //isMainUIVisible = false;
-            SecondUI.SetActive(true);
-            isSecondUIVisible = true;
-        }
+        bomboCard.SetActive(showAll || cardToShow == bomboCard);
+        cardatriceCard.SetActive(showAll || cardToShow == cardatriceCard);
+        muratriceCard.SetActive(showAll || cardToShow == muratriceCard);
+        tagliafoglieCard.SetActive(showAll || cardToShow == tagliafoglieCard);
     }
 
-    
+
 }
