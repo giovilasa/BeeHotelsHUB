@@ -8,13 +8,13 @@ public class ButtonManagerUI : MonoBehaviour
     //public Button MainMenu;//
     public GameObject MainUI;
     public GameObject SecondUI;
-    private bool isSecondUIVisible = false;
+    private bool isSecondUIVisible = true;
     //private bool isMainUIVisible = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        SecondUI.SetActive(false);
+        SecondUI.SetActive(true);
     }
     public void OnButtonClick()
     {

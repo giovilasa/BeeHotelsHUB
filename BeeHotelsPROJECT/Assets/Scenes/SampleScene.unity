@@ -1868,7 +1868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59489241}
   m_Layer: 5
-  m_Name: ManagerContainer
+  m_Name: MuratriceManagerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7322,7 +7322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185904187}
   m_Layer: 5
-  m_Name: ManagerContainer
+  m_Name: CardatriceManagerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29731,7 +29731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738544992}
   m_Layer: 5
-  m_Name: ManagerContainer
+  m_Name: TagliafoglieManagerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59047,7 +59047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423886846}
   m_Layer: 5
-  m_Name: ManagerContainer
+  m_Name: BomboManagerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60710,7 +60710,7 @@ GameObject:
   - component: {fileID: 1464348189}
   - component: {fileID: 1464348188}
   m_Layer: 5
-  m_Name: CardSelected4
+  m_Name: CardTagliafoglie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
