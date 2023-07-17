@@ -8,8 +8,8 @@ public class WindowRestaurantManager : MonoBehaviour
     public GameObject windowCanvas;
     public GameObject falseRestaurant;
     public GameObject trueRestaurant;
-    
-    public Button[] buttonsToMonitor;
+
+    public Button buttonToMonitor;
 
     public Button additionalButton;
     public Button day3Button;
@@ -20,15 +20,13 @@ public class WindowRestaurantManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Debug.Log("Il metodo Start del Ristorante è stato chiamato.");
         trueRestaurant.gameObject.SetActive(false);
         falseRestaurant.gameObject.SetActive(true);
         waitingObject.SetActive(false);
         newWindow.SetActive(false);
 
-        foreach (Button button in buttonsToMonitor)
-        {
-            button.onClick.AddListener(OnButtonPressed);
-        }
+        buttonToMonitor.onClick.AddListener(OnButtonPressed);
 
         additionalButton.onClick.AddListener(OnAdditionalButtonPressed);
         day3Button.onClick.AddListener(OnDay3ButtonPressed);
@@ -36,23 +34,10 @@ public class WindowRestaurantManager : MonoBehaviour
 
     private void OnButtonPressed()
     {
-        bool allButtonsPressed = true;
+        Debug.Log("Il pulsante monitorato è stato premuto");
 
-        foreach (Button button in buttonsToMonitor)
-        {
-            if (!button.interactable)
-            {
-                allButtonsPressed = false;
-                break;
-            }
-        }
-
-        if (allButtonsPressed)
-        {
-            // Apparizione dell'oggetto nella scena
-            trueRestaurant.gameObject.SetActive(true);
-            falseRestaurant.gameObject.SetActive(false);
-        }
+        trueRestaurant.SetActive(true);
+        falseRestaurant.SetActive(false);
     }
 
     public void OnMouseDown()
