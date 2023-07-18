@@ -20,7 +20,7 @@ public class WindowRestaurantManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log("Il metodo Start del Ristorante è stato chiamato.");
+        //Debug.Log("Il metodo Start del Ristorante è stato chiamato.");
         trueRestaurant.gameObject.SetActive(false);
         falseRestaurant.gameObject.SetActive(true);
         waitingObject.SetActive(false);
@@ -34,7 +34,7 @@ public class WindowRestaurantManager : MonoBehaviour
 
     private void OnButtonPressed()
     {
-        Debug.Log("Il pulsante monitorato è stato premuto");
+        //Debug.Log("Il pulsante monitorato è stato premuto");
 
         trueRestaurant.SetActive(true);
         falseRestaurant.SetActive(false);
