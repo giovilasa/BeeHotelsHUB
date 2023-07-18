@@ -81175,22 +81175,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66fd9e56910443f4c873609e24e49cb1, type: 3}
   m_PrefabInstance: {fileID: 1836837132}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1836837135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836837134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb493c572ddf3148b188f35fcd3b971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstHotel: {fileID: 1428742735}
-  secondHotel: {fileID: 1836837134}
-  buttonsToMonitor:
-  - {fileID: 106391243}
 --- !u!114 &1836837136
 MonoBehaviour:
   m_ObjectHideFlags: 0

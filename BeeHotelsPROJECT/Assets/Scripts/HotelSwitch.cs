@@ -7,10 +7,9 @@ public class HotelSwitch : MonoBehaviour
 {
     public GameObject firstHotel;
     public GameObject secondHotel;
-    //public bool interactable;
     public Button[] buttonsToMonitor;
 
-    // Start is called before the first frame update
+
     private void Start()
     {
         secondHotel.gameObject.SetActive(false);
@@ -25,6 +24,7 @@ public class HotelSwitch : MonoBehaviour
 
     private void OnButtonPressed()
     {
+
         bool allButtonsPressed = true;
 
         foreach (Button button in buttonsToMonitor)
@@ -38,9 +38,10 @@ public class HotelSwitch : MonoBehaviour
 
         if (allButtonsPressed)
         {
-            // Apparizione dell'oggetto nella scena
-            secondHotel.gameObject.SetActive(true);
-            firstHotel.gameObject.SetActive(false);
+            Debug.Log("Switching to the second hotel");
+
+            firstHotel.SetActive(false);
+            secondHotel.SetActive(true);
         }
     }
 
