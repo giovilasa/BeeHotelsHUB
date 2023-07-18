@@ -12,8 +12,11 @@ public class QuitButton : MonoBehaviour
     public Light StartLight;
 
     public GameObject StartBackground;
-    public GameObject StartUI;
     public GameObject MainUI;
+
+    public GameObject StartUI;
+    public GameObject StartOptions;
+    public GameObject StartCredits;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,10 @@ public class QuitButton : MonoBehaviour
         StartLight.gameObject.SetActive(!StartLight.gameObject.activeSelf);
         MainLight.gameObject.SetActive(!MainLight.gameObject.activeSelf);
         StartBackground.gameObject.SetActive(!StartBackground.gameObject.activeSelf);
-        StartUI.gameObject.SetActive(!StartUI.gameObject.activeSelf);
+        StartUI.gameObject.SetActive(true);
         MainUI.gameObject.SetActive(!MainUI.gameObject.activeSelf);
+        StartOptions.SetActive(false);
+        StartCredits.SetActive(false);
     }
 
     // Update is called once per frame

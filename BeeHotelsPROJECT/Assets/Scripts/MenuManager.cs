@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-
     [SerializeField] private GameObject[] menus;
     [SerializeField] private GameObject initialMenu; // Specifica il menu da attivare all'inizio
 
@@ -12,20 +11,24 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        //Debug.Log("Start: Nasconde tutti i menu");
         HideAllMenus();
-
+        
         // Attiva il menu iniziale specificato
         if (initialMenu != null)
         {
+            //Debug.Log("Start: Attiva il menu iniziale specificato");
             ShowMenu(initialMenu);
         }
     }
 
     public void ShowMenu(GameObject menu)
     {
+        Debug.Log("ShowMenu: Nasconde il menu corrente se esiste");
         // Nasconde il menu corrente se esiste
         HideCurrentMenu();
 
+        Debug.Log("ShowMenu: Mostra il menu specificato");
         // Mostra il menu specificato
         menu.SetActive(true);
         currentMenu = menu;
@@ -35,6 +38,7 @@ public class MenuManager : MonoBehaviour
     {
         if (currentMenu != null)
         {
+            Debug.Log("HideCurrent: Nasconde il menu corrente");
             // Nasconde il menu corrente
             currentMenu.SetActive(false);
             currentMenu = null;
@@ -46,14 +50,9 @@ public class MenuManager : MonoBehaviour
         // Nasconde tutti i menu
         foreach (GameObject menu in menus)
         {
+            Debug.Log("HideAll: Nasconde tutti i menu");
             menu.SetActive(false);
         }
         currentMenu = null;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
