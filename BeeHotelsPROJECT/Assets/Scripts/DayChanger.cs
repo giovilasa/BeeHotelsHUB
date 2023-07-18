@@ -9,6 +9,8 @@ public class DayChanger : MonoBehaviour
     public GameObject[] objectsToEnable;
     public GameObject[] windowsToClose;
 
+    public TimeController timeController; // Riferimento allo script TimeController
+
     public void DisableObjects()
     {
         foreach (GameObject obj in objectsToDisable)
@@ -39,5 +41,10 @@ public class DayChanger : MonoBehaviour
         {
             obj.SetActive(false);
         }
+    }
+
+    public void RestartTimer()
+    {
+        timeController.RestartTimer();
     }
 }
