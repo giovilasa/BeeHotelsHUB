@@ -23687,6 +23687,7 @@ GameObject:
   - component: {fileID: 495309515}
   - component: {fileID: 495309517}
   - component: {fileID: 495309516}
+  - component: {fileID: 495309518}
   m_Layer: 5
   m_Name: CercareNidoEnabled
   m_TagString: Untagged
@@ -23749,6 +23750,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495309514}
   m_CullTransparentMesh: 1
+--- !u!114 &495309518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495309514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4b67369637b93438eb9be12892e303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day3Button: {fileID: 1864774399}
+  notificationSystem: {fileID: 1038020554}
+  NewCard1: {fileID: 95456353}
+  NewCard2: {fileID: 1712326455}
+  NewCard3: {fileID: 1500026468}
+  NewCard4: {fileID: 497227840}
 --- !u!1001 &495555428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49075,6 +49094,7 @@ GameObject:
   - component: {fileID: 981451204}
   - component: {fileID: 981451206}
   - component: {fileID: 981451205}
+  - component: {fileID: 981451207}
   m_Layer: 5
   m_Name: RaccoltaPollineEnabled
   m_TagString: Untagged
@@ -49137,6 +49157,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981451203}
   m_CullTransparentMesh: 1
+--- !u!114 &981451207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981451203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4b67369637b93438eb9be12892e303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day3Button: {fileID: 1864774399}
+  notificationSystem: {fileID: 1038020554}
+  NewCard1: {fileID: 95456353}
+  NewCard2: {fileID: 1712326455}
+  NewCard3: {fileID: 1500026468}
+  NewCard4: {fileID: 497227840}
 --- !u!1 &982603284
 GameObject:
   m_ObjectHideFlags: 0
@@ -61314,6 +61352,7 @@ GameObject:
   - component: {fileID: 1199934050}
   - component: {fileID: 1199934052}
   - component: {fileID: 1199934051}
+  - component: {fileID: 1199934053}
   m_Layer: 5
   m_Name: RaccoltaMaterialeEnabled
   m_TagString: Untagged
@@ -61376,6 +61415,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199934049}
   m_CullTransparentMesh: 1
+--- !u!114 &1199934053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199934049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4b67369637b93438eb9be12892e303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day3Button: {fileID: 1864774399}
+  notificationSystem: {fileID: 1038020554}
+  NewCard1: {fileID: 95456353}
+  NewCard2: {fileID: 1712326455}
+  NewCard3: {fileID: 1500026468}
+  NewCard4: {fileID: 497227840}
 --- !u!1 &1203240030
 GameObject:
   m_ObjectHideFlags: 0
@@ -92597,6 +92654,7 @@ GameObject:
   - component: {fileID: 1741674142}
   - component: {fileID: 1741674144}
   - component: {fileID: 1741674143}
+  - component: {fileID: 1741674145}
   m_Layer: 5
   m_Name: DeporreUovaEnabled
   m_TagString: Untagged
@@ -92659,6 +92717,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741674141}
   m_CullTransparentMesh: 1
+--- !u!114 &1741674145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741674141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4b67369637b93438eb9be12892e303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day3Button: {fileID: 1864774399}
+  notificationSystem: {fileID: 1038020554}
+  NewCard1: {fileID: 95456353}
+  NewCard2: {fileID: 1712326455}
+  NewCard3: {fileID: 1500026468}
+  NewCard4: {fileID: 497227840}
 --- !u!1001 &1742150558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103070,6 +103146,7 @@ GameObject:
   - component: {fileID: 1948586970}
   - component: {fileID: 1948586972}
   - component: {fileID: 1948586971}
+  - component: {fileID: 1948586973}
   m_Layer: 5
   m_Name: SigillareEnabled
   m_TagString: Untagged
@@ -103132,6 +103209,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948586969}
   m_CullTransparentMesh: 1
+--- !u!114 &1948586973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948586969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4b67369637b93438eb9be12892e303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day3Button: {fileID: 1864774399}
+  notificationSystem: {fileID: 1038020554}
+  NewCard1: {fileID: 95456353}
+  NewCard2: {fileID: 1712326455}
+  NewCard3: {fileID: 1500026468}
+  NewCard4: {fileID: 497227840}
 --- !u!1 &1948781987
 GameObject:
   m_ObjectHideFlags: 0
