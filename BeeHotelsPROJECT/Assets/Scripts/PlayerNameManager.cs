@@ -7,10 +7,8 @@ using TMPro;
 public class PlayerNameManager : MonoBehaviour
 {
     public TMP_InputField inputField;
-    public List<TextMeshProUGUI> playerNameTexts; // Lista di altre componenti di testo
+    public List<TextMeshProUGUI> playerNameTexts;
     public Button confirmButton;
-
-    private string playerName;
 
     private void Start()
     {
@@ -19,13 +17,15 @@ public class PlayerNameManager : MonoBehaviour
 
     public void OnConfirmButtonClicked()
     {
-        playerName = inputField.text;
+        string playerName = inputField.text;
+
+        TextManager.Instance.SetPlayerName(playerName); // Chiamiamo la funzione di TextManager per impostare il nome del giocatore.
+
         foreach (var textComponent in playerNameTexts)
         {
             textComponent.text = playerName;
         }
 
-        // Disabilita l'interazione con il campo di input dopo la conferma
         inputField.interactable = false;
         confirmButton.interactable = false;
     }

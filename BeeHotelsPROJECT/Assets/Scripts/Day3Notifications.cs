@@ -12,17 +12,11 @@ public class Day3Notifications : MonoBehaviour
     public GameObject NewCard3;
     public GameObject NewCard4;
 
-    public Button activityButton;  // Riferimento al pulsante "Activity"
-    private bool activityButtonClicked = false;
-
 
     private void Start()
     {
         Button day3Button = GetComponent<Button>();
         day3Button.onClick.AddListener(OnDay3ButtonClick);
-
-        Button activityButton = GetComponent<Button>();
-        activityButton.onClick.AddListener(OnActivityButtonClick);
     }
 
     private void OnDay3ButtonClick()
@@ -47,32 +41,4 @@ public class Day3Notifications : MonoBehaviour
         }
     }
 
-    private void OnActivityButtonClick()
-    {
-        Debug.Log("Activity Button Clicked");
-        notificationSystem.SetActivityButtonClicked(true);
-    }
-
-    private void Update()
-    {
-        if (activityButtonClicked)
-        {
-            if (NewCard1.activeSelf)
-            {
-                notificationSystem.ModifyContainerElements(8);  // Passa l'indice 8 per NewCard1
-            }
-            else if (NewCard2.activeSelf)
-            {
-                notificationSystem.ModifyContainerElements(9);  // Passa l'indice 9 per NewCard2
-            }
-            else if (NewCard3.activeSelf)
-            {
-                notificationSystem.ModifyContainerElements(10);  // Passa l'indice 10 per NewCard3
-            }
-            else if (NewCard4.activeSelf)
-            {
-                notificationSystem.ModifyContainerElements(11);  // Passa l'indice 11 per NewCard4
-            }
-        }
-    }
 }
