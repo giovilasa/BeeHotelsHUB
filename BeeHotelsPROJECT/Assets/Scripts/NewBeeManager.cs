@@ -29,6 +29,11 @@ public class NewBeeManager : MonoBehaviour
     public GameObject Ticket_Manager3;
     public GameObject Ticket_Manager4;
 
+    public GameObject Manager1;
+    public GameObject Manager2;
+    public GameObject Manager3;
+    public GameObject Manager4;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +53,7 @@ public class NewBeeManager : MonoBehaviour
             notificationSystem.ModifyContainerElements(0);  // Passa l'indice 0 per NewCard1
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
+            Manager1.gameObject.SetActive(true);
         }
 
         else if (Card2.activeSelf)
@@ -57,6 +63,7 @@ public class NewBeeManager : MonoBehaviour
             notificationSystem.ModifyContainerElements(1);  // Passa l'indice 1 per NewCard2
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
+            Manager2.gameObject.SetActive(true);
         }
 
         else if (Card3.activeSelf)
@@ -66,6 +73,7 @@ public class NewBeeManager : MonoBehaviour
             notificationSystem.ModifyContainerElements(2);  // Passa l'indice 2 per NewCard3
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
+            Manager3.gameObject.SetActive(true);
         }
 
         else if (Card4.activeSelf)
@@ -75,6 +83,7 @@ public class NewBeeManager : MonoBehaviour
             notificationSystem.ModifyContainerElements(3);  // Passa l'indice 3 per NewCard4
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
+            Manager4.gameObject.SetActive(true);
         }
 
         Debug.Log("New Bee Manager, chiamato metodo ModifyContainerElements");

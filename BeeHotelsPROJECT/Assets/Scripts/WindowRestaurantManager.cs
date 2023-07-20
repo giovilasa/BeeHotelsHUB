@@ -17,6 +17,9 @@ public class WindowRestaurantManager : MonoBehaviour
 
     public GameObject newWindow;
 
+    public GameObject beeMessage;
+    private bool beeMessageActivated = false;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -42,7 +45,16 @@ public class WindowRestaurantManager : MonoBehaviour
 
     public void OnMouseDown()
     {
-        windowCanvas.SetActive(true);
+        if (!beeMessageActivated)
+        {
+            beeMessageActivated = true;
+            beeMessage.SetActive(true); // Attiva l'oggetto beeMessage
+            windowCanvas.SetActive(false);
+        }
+        else
+        {
+            windowCanvas.SetActive(true);
+        }
     }
 
 
