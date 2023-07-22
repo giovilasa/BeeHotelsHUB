@@ -17,7 +17,7 @@ public class NewBeeManager : MonoBehaviour
     public GameObject NewCard3;
     public GameObject NewCard4;
 
-    public NotificationSystem notificationSystem;
+    //public NotificationSystem notificationSystem;
 
     public GameObject Ticket1;
     public GameObject Ticket2;
@@ -33,6 +33,11 @@ public class NewBeeManager : MonoBehaviour
     public GameObject Manager2;
     public GameObject Manager3;
     public GameObject Manager4;
+
+    public GameObject NotifManager1;
+    public GameObject NotifManager2;
+    public GameObject NotifManager3;
+    public GameObject NotifManager4;
 
 
     // Start is called before the first frame update
@@ -50,40 +55,45 @@ public class NewBeeManager : MonoBehaviour
         {
             Card1.gameObject.SetActive(false);
             NewCard1.gameObject.SetActive(true);
-            notificationSystem.ModifyContainerElements(0);  // Passa l'indice 0 per NewCard1
+            //notificationSystem.ModifyContainerElements(0);  // Passa l'indice 0 per NewCard1
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             Manager1.gameObject.SetActive(true);
+            NotifManager1.gameObject.SetActive(true);
+
         }
 
         else if (Card2.activeSelf)
         {
             Card2.gameObject.SetActive(false);
             NewCard2.gameObject.SetActive(true);
-            notificationSystem.ModifyContainerElements(1);  // Passa l'indice 1 per NewCard2
+            //notificationSystem.ModifyContainerElements(1);  // Passa l'indice 1 per NewCard2
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             Manager2.gameObject.SetActive(true);
+            NotifManager2.gameObject.SetActive(true);
         }
 
         else if (Card3.activeSelf)
         {
             Card3.gameObject.SetActive(false);
             NewCard3.gameObject.SetActive(true);
-            notificationSystem.ModifyContainerElements(2);  // Passa l'indice 2 per NewCard3
+            //notificationSystem.ModifyContainerElements(2);  // Passa l'indice 2 per NewCard3
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             Manager3.gameObject.SetActive(true);
+            NotifManager3.gameObject.SetActive(true);
         }
 
         else if (Card4.activeSelf)
         {
             Card4.gameObject.SetActive(false);
             NewCard4.gameObject.SetActive(true);
-            notificationSystem.ModifyContainerElements(3);  // Passa l'indice 3 per NewCard4
+            //notificationSystem.ModifyContainerElements(3);  // Passa l'indice 3 per NewCard4
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             Manager4.gameObject.SetActive(true);
+            NotifManager4.gameObject.SetActive(true);
         }
 
         Debug.Log("New Bee Manager, chiamato metodo ModifyContainerElements");

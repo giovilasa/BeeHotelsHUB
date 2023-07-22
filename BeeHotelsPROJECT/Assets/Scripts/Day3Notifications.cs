@@ -2,43 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Day3Notifications : MonoBehaviour
 {
-    public NotificationSystem notificationSystem;
-    public GameObject NewCard1;
-    public GameObject NewCard2;
-    public GameObject NewCard3;
-    public GameObject NewCard4;
+    public GameObject NotifManager1;
+    public GameObject NotifManager2;
+    public GameObject NotifManager3;
+    public GameObject NotifManager4;
 
+    public GameObject NewNotif1;
+    public GameObject NewNotif2;
+    public GameObject NewNotif3;
+    public GameObject NewNotif4;
 
-    private void Start()
+    public TextMeshProUGUI NotifText1;
+    public TextMeshProUGUI NotifText2;
+    public TextMeshProUGUI NotifText3;
+    public TextMeshProUGUI NotifText4;
+
+    private string hotelNameReplacement = "Storia naturale";
+    private string hazardNameReplacement = "Pesticidi e Insetticidi";
+    private string equippedReinforcementReplacement = "Alla Scoperta!";
+
+    public void OnDay3ButtonPressed()
     {
-        Button day3Button = GetComponent<Button>();
-        day3Button.onClick.AddListener(OnDay3ButtonClick);
+        if (NotifManager1.activeSelf)
+        {
+            ActivateNotification(NewNotif1);
+        }
+        else if (NotifManager2.activeSelf)
+        {
+            ActivateNotification(NewNotif2);
+        }
+        else if (NotifManager3.activeSelf)
+        {
+            ActivateNotification(NewNotif3);
+        }
+        else if (NotifManager4.activeSelf)
+        {
+            ActivateNotification(NewNotif4);
+        }
     }
 
-    private void OnDay3ButtonClick()
+    private void ActivateNotification(GameObject notification)
     {
-        Debug.Log("3rd Day: notification reinforcement");
+        notification.SetActive(true);
+        ReplaceNotificationText(notification);
+    }
 
-        if (NewCard1.activeSelf)
+    private void ReplaceNotificationText(GameObject notification)
+    {
+        string replacedText = GetReplacedText();
+
+        if (NotifText1 != null && notification == NewNotif1)
         {
-            notificationSystem.ModifyContainerElements(4);  // Passa l'indice 4 per NewCard1
+            NotifText1.text = replacedText;
         }
-        else if (NewCard2.activeSelf)
+        else if (NotifText2 != null && notification == NewNotif2)
         {
-            notificationSystem.ModifyContainerElements(5);  // Passa l'indice 5 per NewCard2
+            NotifText2.text = replacedText;
         }
-        else if (NewCard3.activeSelf)
+        else if (NotifText3 != null && notification == NewNotif3)
         {
-            notificationSystem.ModifyContainerElements(6);  // Passa l'indice 6 per NewCard3
+            NotifText3.text = replacedText;
         }
-        else if (NewCard4.activeSelf)
+        else if (NotifText4 != null && notification == NewNotif4)
         {
-            notificationSystem.ModifyContainerElements(7);  // Passa l'indice 7 per NewCard4
+            NotifText4.text = replacedText;
         }
     }
 
+    private string GetReplacedText()
+    {
+        return NotifText1.text
+            .Replace("{HotelName}", hotelNameReplacement)
+            .Replace("{HazardName}", hazardNameReplacement)
+            .Replace("{EquippedReinforcement}", equippedReinforcementReplacement);
+    }
 }
