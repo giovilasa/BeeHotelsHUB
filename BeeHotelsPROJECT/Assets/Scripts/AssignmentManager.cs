@@ -17,8 +17,12 @@ public class AssignmentManager : MonoBehaviour
 
     public GameObject windowCanvas;
 
+    public AudioSource buttonClickAudioSource;
+
+
     public void OnButton1Click()
     {
+        buttonClickAudioSource.Play();
         objectToActivate1.SetActive(true);
         //objectToActivate2.SetActive(false);
         //objectToActivate3.SetActive(false);
@@ -29,6 +33,7 @@ public class AssignmentManager : MonoBehaviour
         activityToActivate.SetActive(true);
         // Chiudi la seconda finestra
         windowCanvas.SetActive(false);
+        
     }
 
     public void OnButton2Click()
@@ -43,6 +48,7 @@ public class AssignmentManager : MonoBehaviour
         activityToActivate.SetActive(true);
         // Chiudi la seconda finestra
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton3Click()
@@ -57,6 +63,7 @@ public class AssignmentManager : MonoBehaviour
         activityToActivate.SetActive(true);
         // Chiudi la seconda finestra
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton4Click()
@@ -71,5 +78,6 @@ public class AssignmentManager : MonoBehaviour
         activityToActivate.SetActive(true);
         // Chiudi la seconda finestra
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 }

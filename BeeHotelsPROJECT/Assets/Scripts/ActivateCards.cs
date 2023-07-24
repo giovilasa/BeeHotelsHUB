@@ -13,6 +13,8 @@ public class ActivateCards : MonoBehaviour
     public GameObject card6;
     public GameObject card7;
 
+    public AudioSource buttonClickAudioSource;
+
 
     private void Start()
     {
@@ -28,5 +30,6 @@ public class ActivateCards : MonoBehaviour
     public void OnMouseDown()
     {
         card1.SetActive(true);
+        buttonClickAudioSource.Play();
     }
 }

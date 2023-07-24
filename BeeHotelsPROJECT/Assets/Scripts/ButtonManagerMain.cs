@@ -5,25 +5,24 @@ using UnityEngine.UI;
 
 public class ButtonManagerMain : MonoBehaviour
 {
+    public GameObject window;
 
-    public Button[] buttons;
+    public AudioSource buttonClickAudioSource;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        window.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonClick()
     {
-        // Verifica se la telecamera principale è attiva
-        bool isMainCameraActive = Camera.main != null;
+        window.SetActive(true);
+        buttonClickAudioSource.Play();
+    }
 
-        // Abilita o disabilita i pulsanti in base allo stato della telecamera principale
-        foreach (Button button in buttons)
-        {
-            button.interactable = isMainCameraActive;
-        }
+    public void CloseWindow()
+    {
+        window.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 }

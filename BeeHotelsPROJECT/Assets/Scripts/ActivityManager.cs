@@ -16,57 +16,53 @@ public class ActivityManager : MonoBehaviour
     
     public GameObject windowCanvas;
 
+    public AudioSource buttonClickAudioSource;
+
     public void OnButton1Click()
     {
         objectToActivate1.SetActive(true);
-
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton2Click()
     {
         objectToActivate2.SetActive(true);
-        
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton3Click()
     {
         objectToActivate3.SetActive(true);
-        
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton4Click()
     {
         objectToActivate4.SetActive(true);
-
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton5Click()
     {
         objectToActivate5.SetActive(true);
-
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 
     public void OnButton6Click()
     {
         objectToActivate6.SetActive(true);
-
         buttonToDeactivate.SetActive(false);
-        
         windowCanvas.SetActive(false);
+        buttonClickAudioSource.Play();
     }
 }

@@ -6,25 +6,28 @@ public class ReturnButton : MonoBehaviour
 {
     public GameObject CurrUI;
     public GameObject BackUI;
-    private bool isBackUIVisible = false;
-    private bool isCurrUIVisible = true;
+    private bool isBackUIActive = false;
+    private bool isCurrUIActive = true;
+
+    public AudioSource buttonClickAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (buttonClickAudioSource == null)
+        {
+            Debug.LogError("AudioSource non assegnato al componente ButtonClickSound.");
+        }
     }
     public void OnButtonClick()
     {
-        isBackUIVisible = !isBackUIVisible; 
-        BackUI.SetActive(isBackUIVisible); 
-        isCurrUIVisible = !isCurrUIVisible; 
-        CurrUI.SetActive(isCurrUIVisible); 
+        isBackUIActive = !isBackUIActive; 
+        BackUI.SetActive(isBackUIActive);
+        isCurrUIActive = !isCurrUIActive; 
+        CurrUI.SetActive(isCurrUIActive);
+
+        // Riproduci l'effetto sonoro
+        buttonClickAudioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

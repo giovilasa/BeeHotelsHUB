@@ -23,7 +23,14 @@ public class VolumeSlider : MonoBehaviour
     public void OnMasterVolumeChanged(float volume)
     {
         // Imposta il volume generale del gioco
-        AudioListener.volume = volume;
+        if (volume == 0)
+        {
+            AudioListener.volume = 0f; // Disattiva l'audio
+        }
+        else
+        {
+            AudioListener.volume = volume;
+        }
     }
 
     public void OnMusicVolumeChanged(float volume)
@@ -31,7 +38,14 @@ public class VolumeSlider : MonoBehaviour
         // Imposta il volume della musica
         foreach (AudioSource musicSource in musicSources)
         {
-            musicSource.volume = volume;
+            if (volume == 0)
+            {
+                musicSource.volume = 0f; // Disattiva l'audio della musica
+            }
+            else
+            {
+                musicSource.volume = volume;
+            }
         }
     }
 
@@ -40,13 +54,14 @@ public class VolumeSlider : MonoBehaviour
         // Imposta il volume degli effetti sonori
         foreach (AudioSource soundEffectSource in soundEffectSources)
         {
-            soundEffectSource.volume = volume;
+            if (volume == 0)
+            {
+                soundEffectSource.volume = 0f; // Disattiva l'audio degli effetti sonori
+            }
+            else
+            {
+                soundEffectSource.volume = volume;
+            }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

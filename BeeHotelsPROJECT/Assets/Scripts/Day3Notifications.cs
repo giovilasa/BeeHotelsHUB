@@ -54,29 +54,28 @@ public class Day3Notifications : MonoBehaviour
 
     private void ReplaceNotificationText(GameObject notification)
     {
-        string replacedText = GetReplacedText();
 
         if (NotifText1 != null && notification == NewNotif1)
         {
-            NotifText1.text = replacedText;
+            NotifText1.text = GetReplacedText(NotifText1.text);
         }
         else if (NotifText2 != null && notification == NewNotif2)
         {
-            NotifText2.text = replacedText;
+            NotifText2.text = GetReplacedText(NotifText2.text);
         }
         else if (NotifText3 != null && notification == NewNotif3)
         {
-            NotifText3.text = replacedText;
+            NotifText3.text = GetReplacedText(NotifText3.text);
         }
         else if (NotifText4 != null && notification == NewNotif4)
         {
-            NotifText4.text = replacedText;
+            NotifText4.text = GetReplacedText(NotifText4.text);
         }
     }
 
-    private string GetReplacedText()
+    private string GetReplacedText(string originalText)
     {
-        return NotifText1.text
+        return originalText
             .Replace("{HotelName}", hotelNameReplacement)
             .Replace("{HazardName}", hazardNameReplacement)
             .Replace("{EquippedReinforcement}", equippedReinforcementReplacement);

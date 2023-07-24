@@ -9,6 +9,9 @@ public class MenuManager : MonoBehaviour
 
     private GameObject currentMenu;
 
+    public AudioSource buttonClickAudioSource;
+
+
     private void Start()
     {
         //Debug.Log("Start: Nasconde tutti i menu");
@@ -22,27 +25,27 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    
     public void ShowMenu(GameObject menu)
     {
-        Debug.Log("ShowMenu: Nasconde il menu corrente se esiste");
-        // Nasconde il menu corrente se esiste
         HideCurrentMenu();
-
-        Debug.Log("ShowMenu: Mostra il menu specificato");
-        // Mostra il menu specificato
-        menu.SetActive(true);
-        currentMenu = menu;
+        ShowSpecificMenu(menu);
+        buttonClickAudioSource.Play();
     }
 
     public void HideCurrentMenu()
     {
         if (currentMenu != null)
         {
-            Debug.Log("HideCurrent: Nasconde il menu corrente");
-            // Nasconde il menu corrente
             currentMenu.SetActive(false);
             currentMenu = null;
         }
+    }
+
+    private void ShowSpecificMenu(GameObject menu)
+    {
+        menu.SetActive(true);
+        currentMenu = menu;
     }
 
     public void HideAllMenus()
@@ -54,5 +57,12 @@ public class MenuManager : MonoBehaviour
             menu.SetActive(false);
         }
         currentMenu = null;
+    }
+
+    public void ShowStartMenu(GameObject menu)
+    {
+        HideAllMenus();
+        ShowSpecificMenu(menu);
+        buttonClickAudioSource.Play();
     }
 }

@@ -19,6 +19,8 @@ public class BeeHotelManager : MonoBehaviour
     public GameObject NewCard3;
     public GameObject NewCard4;
 
+    public AudioSource buttonClickAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class BeeHotelManager : MonoBehaviour
         else
         {
             windowCanvas.SetActive(true);
+            // Riproduci l'effetto sonoro
+            buttonClickAudioSource.Play();
         }
 
     }
@@ -45,5 +49,7 @@ public class BeeHotelManager : MonoBehaviour
     public void CloseWindow()
     {
         windowCanvas.SetActive(false);
+        // Riproduci l'effetto sonoro
+        buttonClickAudioSource.Play();
     }
 }

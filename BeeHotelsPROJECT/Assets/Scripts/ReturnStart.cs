@@ -12,6 +12,8 @@ public class ReturnStart : MonoBehaviour
     public GameObject StartBackground;
     public GameObject Start;
 
+    public AudioSource buttonClickAudioSource;
+
     public void OnMouseUp()
     {
         StartCamera.gameObject.SetActive(!StartCamera.gameObject.activeSelf);
@@ -20,6 +22,6 @@ public class ReturnStart : MonoBehaviour
         MainLight.gameObject.SetActive(!MainLight.gameObject.activeSelf);
         StartBackground.gameObject.SetActive(!StartBackground.gameObject.activeSelf);
         Start.gameObject.SetActive(!Start.gameObject.activeSelf);
-
+        buttonClickAudioSource.Play();
     }
 }

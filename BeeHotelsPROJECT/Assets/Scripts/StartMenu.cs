@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
-
     public bool isStart;
     public bool isQuit;
 
@@ -14,6 +13,9 @@ public class StartMenu : MonoBehaviour
     public Light StartLight;
 
     public GameObject StartBackground;
+
+    public AudioSource buttonClickAudioSource;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class StartMenu : MonoBehaviour
     {
         if (isStart)
         {
+            // Riproduci l'effetto sonoro
+            buttonClickAudioSource.Play();
             StartCamera.gameObject.SetActive(!StartCamera.gameObject.activeSelf);
             MainCamera.gameObject.SetActive(!MainCamera.gameObject.activeSelf);
             StartLight.gameObject.SetActive(!StartLight.gameObject.activeSelf);

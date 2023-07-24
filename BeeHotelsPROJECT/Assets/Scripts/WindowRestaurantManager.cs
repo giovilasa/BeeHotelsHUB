@@ -20,6 +20,9 @@ public class WindowRestaurantManager : MonoBehaviour
     public GameObject beeMessage;
     private bool beeMessageActivated = false;
 
+    public AudioSource buttonClickAudioSource;
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -54,6 +57,7 @@ public class WindowRestaurantManager : MonoBehaviour
         else
         {
             windowCanvas.SetActive(true);
+            buttonClickAudioSource.Play();
         }
     }
 

@@ -16,6 +16,8 @@ public class ButtonManagerUI : MonoBehaviour
     public Button muratriceButton;
     public Button tagliafoglieButton;
 
+    public AudioSource buttonClickAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class ButtonManagerUI : MonoBehaviour
         cardatriceCard.SetActive(showAll || cardToShow == cardatriceCard);
         muratriceCard.SetActive(showAll || cardToShow == muratriceCard);
         tagliafoglieCard.SetActive(showAll || cardToShow == tagliafoglieCard);
+        buttonClickAudioSource.Play();
     }
 
 
