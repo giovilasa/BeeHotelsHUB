@@ -6,12 +6,12 @@ using System;
 
 public class CountdownController : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;  // Riferimento al componente TextMeshProUGUI che mostrerà il countdown
-    public GameObject waitingObject;  // Riferimento all'oggetto che controlla l'avvio del countdown
+    public TextMeshProUGUI timerText;  // Reference to the TextMeshProUGUI component which will display the countdown
+    public GameObject waitingObject;  // Reference to the TextMeshProUGUI component which will display the countdown
 
-    private TimeSpan countdownDuration = TimeSpan.FromHours(24); // 24 ore
-    private TimeSpan timeRemaining;  // Tempo rimanente nel countdown
-    private bool countdownRunning;  // Indica se il countdown è in esecuzione
+    private TimeSpan countdownDuration = TimeSpan.FromHours(24); // 24 hours
+    private TimeSpan timeRemaining;  // Time remaining in the countdown
+    private bool countdownRunning;  // Indicates whether the countdown is running
 
     private void Start()
     {

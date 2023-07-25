@@ -31,9 +31,9 @@ public class AssignmentManager : MonoBehaviour
         buttonToDeactivate1.SetActive(false);
         buttonToDeactivate2.SetActive(false);
         activityToActivate.SetActive(true);
-        // Chiudi la seconda finestra
-        windowCanvas.SetActive(false);
         
+        windowCanvas.SetActive(false); //Close the second window
+
     }
 
     public void OnButton2Click()
@@ -46,8 +46,8 @@ public class AssignmentManager : MonoBehaviour
         buttonToDeactivate1.SetActive(false);
         buttonToDeactivate2.SetActive(false);
         activityToActivate.SetActive(true);
-        // Chiudi la seconda finestra
-        windowCanvas.SetActive(false);
+        
+        windowCanvas.SetActive(false); //Close the second window
         buttonClickAudioSource.Play();
     }
 
@@ -61,8 +61,8 @@ public class AssignmentManager : MonoBehaviour
         buttonToDeactivate1.SetActive(false);
         buttonToDeactivate2.SetActive(false);
         activityToActivate.SetActive(true);
-        // Chiudi la seconda finestra
-        windowCanvas.SetActive(false);
+        
+        windowCanvas.SetActive(false); //Close the second window
         buttonClickAudioSource.Play();
     }
 
@@ -76,8 +76,8 @@ public class AssignmentManager : MonoBehaviour
         buttonToDeactivate1.SetActive(false);
         buttonToDeactivate2.SetActive(false);
         activityToActivate.SetActive(true);
-        // Chiudi la seconda finestra
-        windowCanvas.SetActive(false);
+        
+        windowCanvas.SetActive(false); //Close the second window
         buttonClickAudioSource.Play();
     }
 }

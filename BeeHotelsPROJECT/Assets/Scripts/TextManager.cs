@@ -6,7 +6,7 @@ using TMPro;
 public class TextManager : MonoBehaviour
 {
     public static TextManager Instance;
-    public GameObject[] objectsToReplace; // Dichiarazione dell'array di GameObject.
+    public GameObject[] objectsToReplace; // GameObject array declaration.
     private string playerName;
 
     private void Awake()
@@ -26,23 +26,23 @@ public class TextManager : MonoBehaviour
         if (string.IsNullOrEmpty(playerName))
         {
             playerName = name;
-            UpdateTexts(); // Esegue la sostituzione nei GameObject specificati nell'array.
+            UpdateTexts(); // GameObject array declaration.
         }
     }
 
     private void UpdateTexts()
     {
-        // Controllo se playerName è valido per evitare sostituzioni indesiderate.
+        // Check if playerName is valid to avoid unwanted substitutions.
         if (!string.IsNullOrEmpty(playerName))
         {
-            // Itero attraverso gli oggetti nell'array objectsToReplace.
+            // I iterate through the objects in the objectsToReplace array.
             foreach (GameObject obj in objectsToReplace)
             {
-                // Controllo se l'oggetto contiene il componente TextMeshProUGUI.
+                // Checking if the object contains the TextMeshProUGUI component.
                 TextMeshProUGUI textComponent = obj.GetComponent<TextMeshProUGUI>();
                 if (textComponent != null)
                 {
-                    // Sostituisco la stringa "[NomeGiocatore]" con playerName.
+                    // I replace the string "[NomeGiocatore]" with playerName.
                     string newText = textComponent.text.Replace("[NomeGiocatore]", playerName);
                     textComponent.text = newText;
                 }

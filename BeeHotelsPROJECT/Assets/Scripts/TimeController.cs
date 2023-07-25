@@ -5,9 +5,9 @@ using TMPro;
 
 public class TimeController : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;  // Riferimento al componente TextMeshProUGUI che mostrerà il timer
-    private float startTime;  // Tempo di inizio del timer
-    private bool timerRunning;  // Indica se il timer è in esecuzione
+    public TextMeshProUGUI timerText;  // Reference to the TextMeshProUGUI component which will display the timer
+    private float startTime;  // Timer start time
+    private bool timerRunning;  // Indicates if the timer is running
 
     private int startingHour = 12;
     private int startingMinute = 10;
@@ -29,7 +29,7 @@ public class TimeController : MonoBehaviour
         startTime = Time.time;
         timerRunning = true;
 
-        // Imposta il tempo di partenza
+        // Set the departure time
         startTime = Time.time - GetTotalElapsedTime();
     }
 
@@ -37,25 +37,25 @@ public class TimeController : MonoBehaviour
     {
         if (timerRunning)
         {
-            // Calcola l'elapsedTime totale
+            // Calculate the total elapsedTime
             float totalElapsedTime = GetTotalElapsedTime();
 
-            // Converti il tempo totale in ore, minuti e secondi
+            // Convert total time to hours, minutes and seconds
             int hours = startingHour + (int)(totalElapsedTime / 3600);
             int minutes = startingMinute + (int)((totalElapsedTime % 3600) / 60);
             int seconds = startingSecond + (int)(totalElapsedTime % 60);
 
-            // Formatta i valori per visualizzare l'orario nel formato "hh:mm:ss"
+            // Format the values to display the time in the format "hh:mm:ss"
             string formattedTime = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
-            // Aggiorna il testo del timer
+            // Update timer text
             timerText.text = formattedTime;
         }
     }
 
     private float GetTotalElapsedTime()
     {
-        // Calcola l'elapsedTime totale dalla partenza
+        // Calculate the total elapsedTime from the start
         return Time.time - startTime;
     }
 

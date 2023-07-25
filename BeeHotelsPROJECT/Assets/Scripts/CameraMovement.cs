@@ -8,13 +8,13 @@ public class CameraMovement : MonoBehaviour
     public float zoomSpeed; // Camera Zoom speed
 
     public Vector3 defaultPosition = new Vector3(-251.9f, 18.8f, 21.4f); // default position camera
-    public Vector3 minBounds = new Vector3(-10f, -5f, -10f); // Limiti minimi di movimento della telecamera
-    public Vector3 maxBounds = new Vector3(10f, 5f, 10f); // Limiti massimi di movimento della telecamera
+    public Vector3 minBounds = new Vector3(-10f, -5f, -10f); // Minimum camera movement limits
+    public Vector3 maxBounds = new Vector3(10f, 5f, 10f); // Maximum camera movement limits
 
     private bool isMovingCamera = false;
     private Vector3 lastMousePosition;
 
-    public GameObject[] blockMovementObjects; // Oggetti che bloccano il movimento della telecamera
+    public GameObject[] blockMovementObjects; // Objects that block camera movement
 
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
-        // Movimento della telecamera sugli assi X e Z
+        // Camera movement on X and Z axes
         if (Input.GetMouseButtonDown(1) && !shouldBlockMovement)
         {
             isMovingCamera = true;
@@ -61,7 +61,7 @@ public class CameraMovement : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
-        // Movimento della telecamera lungo l'asse Y
+        // Camera movement along the Y axis
         if (!shouldBlockMovement)
         {
             float scroll = Input.GetAxis("Mouse ScrollWheel");

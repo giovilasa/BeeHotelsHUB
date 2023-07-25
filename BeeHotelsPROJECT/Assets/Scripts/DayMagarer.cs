@@ -32,8 +32,7 @@ public class DayMagarer : MonoBehaviour
 
         if (allButtonsPressed)
         {
-            // Apparizione dell'oggetto nella scena
-            spawnPoint.SetActive(true);
+            spawnPoint.SetActive(true); // Appearance of the object in the scene
         }
     }
 }

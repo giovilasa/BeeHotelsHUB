@@ -10,7 +10,7 @@ public class EndgameManager : MonoBehaviour
     public GameObject spawnPoint;
     public GameObject[] objectsToDisable;
 
-    private int buttonIndex = 0; // Indice del prossimo bottone da premere nell'ordine corretto
+    private int buttonIndex = 0; // Index of the next button to press in the correct order
 
     private void Start()
     {
@@ -22,33 +22,33 @@ public class EndgameManager : MonoBehaviour
 
     private void OnButtonPressed(Button pressedButton)
     {
-        // Verifica se il bottone premuto è quello corretto nell'ordine
+        // Verify if the pressed button is the correct one in the order
         if (pressedButton == buttonsToMonitor[buttonIndex])
         {
-            // Disattiva il bottone premuto in modo che non possa essere premuto di nuovo
+            // Deactivates the pressed button so that it cannot be pressed again
             pressedButton.interactable = false;
 
-            buttonIndex++; // Passa al prossimo bottone nell'ordine corretto
+            buttonIndex++; // Move to the next button in the correct order
 
-            // Verifica se tutti i bottoni sono stati premuti nell'ordine corretto
+            // Check if all buttons have been pressed in the correct order
             if (buttonIndex == buttonsToMonitor.Length)
             {
-                // Disattiva gli oggetti nell'array "objectstodisable"
+                // Disable objects in the "objectstodisable" array
                 foreach (GameObject obj in objectsToDisable)
                 {
                     obj.SetActive(false);
                 }
 
-                // Apparizione dell'oggetto nella scena
+                // Appearance of the object in the scene
                 spawnPoint.SetActive(true);
             }
         }
         else
         {
-            // Resetta l'ordine dei bottoni se viene premuto un bottone sbagliato
+            // Reset button order if wrong button is pressed
             buttonIndex = 0;
 
-            // Riattiva tutti i bottoni per riprovare
+            // Reactivate all buttons to try again
             foreach (Button button in buttonsToMonitor)
             {
                 button.interactable = true;

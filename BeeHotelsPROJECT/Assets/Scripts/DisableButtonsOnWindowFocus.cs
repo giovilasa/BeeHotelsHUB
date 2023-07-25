@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class DisableButtonsOnWindowFocus : MonoBehaviour
 {
-    public GameObject windowObject; // Riferimento all'oggetto finestra
-    public Button[] buttonsToDisable; // Array contenente i pulsanti da disabilitare
+    public GameObject windowObject; // Reference to the window object
+    public Button[] buttonsToDisable; // Array containing the buttons to disable
 
     private void OnEnable()
     {
-        // Quando la finestra viene attivata, disabilita i pulsanti
+        // When the window is activated, it disables the buttons
         DisableButtons();
     }
 
     private void OnDisable()
     {
-        // Quando la finestra viene disattivata, riabilita i pulsanti
+        // When the window is deactivated, it re-enables the buttons
         EnableButtons();
     }
 
     private void DisableButtons()
     {
-        // Disabilita i pulsanti
+        // Disable buttons
         foreach (Button button in buttonsToDisable)
         {
             button.interactable = false;
@@ -31,7 +31,7 @@ public class DisableButtonsOnWindowFocus : MonoBehaviour
 
     private void EnableButtons()
     {
-        // Abilita i pulsanti
+        // Enable buttons
         foreach (Button button in buttonsToDisable)
         {
             button.interactable = true;

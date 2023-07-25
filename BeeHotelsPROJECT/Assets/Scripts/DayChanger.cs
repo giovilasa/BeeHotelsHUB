@@ -9,7 +9,7 @@ public class DayChanger : MonoBehaviour
     public GameObject[] objectsToEnable;
     public GameObject[] windowsToClose;
 
-    public TimeController timeController; // Riferimento allo script TimeController
+    public TimeController timeController; // Reference to the TimeController script
 
     public void DisableObjects()
     {

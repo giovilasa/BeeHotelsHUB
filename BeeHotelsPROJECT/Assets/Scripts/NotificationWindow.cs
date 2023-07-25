@@ -16,32 +16,30 @@ public class NotificationWindow : MonoBehaviour
     public GameObject notificationPrefab;
 
 
-    public ButtonType currentButton; // Aggiunta: Memorizza il pulsante corrente
+    public ButtonType currentButton; // Addition: Memorize the current button
 
-    //public GameObject[] managerObjects; // Aggiunta: Array di oggetti manager
-    //public Button hotelButton; // Aggiunta: Riferimento al pulsante dell'hotel
-    //public Button hazardButton; // Aggiunta: Riferimento al pulsante del pericolo
-    //public GameObject[] reinforcementObjects; // Aggiunta: Array di oggetti reinforcement
-    //public GameObject[] activityObjects; // Aggiunta: Array di oggetti activity
+    //public GameObject[] managerObjects; // Addition: Array of manager objects
+    //public Button hotelButton; // Addition: Reference to the hotel button
+    //public Button hazardButton; // Added: Reference to the danger button
+    //public GameObject[] reinforcementObjects; // Addition: Array of reinforcement objects
+    //public GameObject[] activityObjects; // Addition: Array of activity objects
 
 
     private void Start()
     {
-        Debug.Log("Window: ottenuto il riferimento all'oggetto NotificationManager");
+        //Debug.Log("Window: ottenuto il riferimento all'oggetto NotificationManager");
         notificationManager = GetComponent<NotificationManager>();
 
-        Debug.Log("Chiamato il metodo SetNotificationWindow di NotificationManager per passare il riferimento all'oggetto NotificationWindow.");
+        //Debug.Log("Chiamato il metodo SetNotificationWindow di NotificationManager per passare il riferimento all'oggetto NotificationWindow.");
         notificationManager.SetNotificationWindow(this);
 
-        Debug.Log("Ordina le notifiche in ordine progressivo");
-        // Ordina le notifiche in ordine progressivo
+        //Debug.Log("Ordina le notifiche in ordine progressivo");
         notificationManager.notifications = notificationManager.notifications.OrderBy(n => n.progressive).ToList();
 
-        Debug.Log("Mostra la prima notifica relativa al pulsante corrente nella finestra");
-        // Mostra la prima notifica relativa al pulsante corrente nella finestra
+        //Debug.Log("Mostra la prima notifica relativa al pulsante corrente nella finestra");
         ShowNotification(0);
 
-        Debug.Log("Genera l'oggetto prefab delle notifiche");
+        //Debug.Log("Genera l'oggetto prefab delle notifiche");
         GameObject notificationObject = Instantiate(notificationPrefab, transform);
         notificationText = notificationObject.GetComponentInChildren<TextMeshProUGUI>();
         icon1RawImage = notificationObject.transform.Find("Icon1").GetComponent<RawImage>();
@@ -56,20 +54,18 @@ public class NotificationWindow : MonoBehaviour
     }
 
 
-    // Mostra la notifica corrispondente all'indice specificato e al pulsante corrente
+    // Shows the notification corresponding to the specified index and current button
     public void ShowNotification(int index)
     {
-        Debug.Log("Show Notification");
+        //Debug.Log("Show Notification");
         if (index >= 0 && index < notificationManager.notifications.Count)
         {
             Notification notification = notificationManager.notifications[index];
 
-            Debug.Log("Controlla se la notifica corrente è relativa al pulsante corrente");
-            // Controlla se la notifica corrente è relativa al pulsante corrente
+            //Debug.Log("Controlla se la notifica corrente è relativa al pulsante corrente");
             if (notification.button == currentButton)
             {
-                Debug.Log("Aggiorna il testo e le immagini con i dati della notifica corrente");
-                // Aggiorna il testo e le immagini con i dati della notifica corrente
+                //Debug.Log("Aggiorna il testo e le immagini con i dati della notifica corrente");
                 //notificationText.text = ProcessMessage(notification.message);
                 //icon1RawImage.texture = notification.icon1;
                 //icon2RawImage.texture = notification.icon2;

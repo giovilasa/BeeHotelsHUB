@@ -16,7 +16,7 @@ public class ClickSound : MonoBehaviour
 
     public void OnMouseDown()
     {
-        // Riproduci l'effetto sonoro
-        buttonClickAudioSource.Play();
+        
+        buttonClickAudioSource.Play(); //Play the sound effect
     }
 }

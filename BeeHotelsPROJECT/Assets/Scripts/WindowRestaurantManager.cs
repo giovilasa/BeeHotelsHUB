@@ -23,7 +23,6 @@ public class WindowRestaurantManager : MonoBehaviour
     public AudioSource buttonClickAudioSource;
 
 
-    // Start is called before the first frame update
     private void Start()
     {
         //Debug.Log("Il metodo Start del Ristorante è stato chiamato.");
@@ -51,7 +50,7 @@ public class WindowRestaurantManager : MonoBehaviour
         if (!beeMessageActivated)
         {
             beeMessageActivated = true;
-            beeMessage.SetActive(true); // Attiva l'oggetto beeMessage
+            beeMessage.SetActive(true); // Activate the beeMessage object
             windowCanvas.SetActive(false);
         }
         else

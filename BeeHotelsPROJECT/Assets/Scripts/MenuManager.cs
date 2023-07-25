@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] menus;
-    [SerializeField] private GameObject initialMenu; // Specifica il menu da attivare all'inizio
+    [SerializeField] private GameObject initialMenu; // Specifies the menu to activate at the beginning
 
     private GameObject currentMenu;
 
@@ -16,8 +16,8 @@ public class MenuManager : MonoBehaviour
     {
         //Debug.Log("Start: Nasconde tutti i menu");
         HideAllMenus();
-        
-        // Attiva il menu iniziale specificato
+
+        // Activate the specified initial menu
         if (initialMenu != null)
         {
             //Debug.Log("Start: Attiva il menu iniziale specificato");
@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
 
     public void HideAllMenus()
     {
-        // Nasconde tutti i menu
+        // Hides all menus
         foreach (GameObject menu in menus)
         {
             Debug.Log("HideAll: Nasconde tutti i menu");

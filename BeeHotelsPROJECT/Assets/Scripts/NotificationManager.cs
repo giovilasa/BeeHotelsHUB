@@ -45,17 +45,17 @@ public class NotificationManager : MonoBehaviour
 
     public void AddNotification(Notification notification)
     {
-        Debug.Log("Add Notification (notification manager)");
+        //Debug.Log("Add Notification (notification manager)");
 
         notifications.Add(notification);
         notificationWindow.ShowNotification(notifications.Count - 1);
     }
 
 
-    // Aggiungi una notifica
+    
     public void AddNotification(int progressive, NotificationType type, ButtonType button, string message, Texture2D icon1, Texture2D icon2, ButtonType buttonType, TextMeshProUGUI notificationText, RawImage icon1RawImage, RawImage icon2RawImage)
     {
-        Debug.Log("Add Notification (notification manager)");
+        //Debug.Log("Add Notification (notification manager)");
 
         Notification notification = new Notification();
         notification.progressive = progressive;

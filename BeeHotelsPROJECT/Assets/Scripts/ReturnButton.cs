@@ -11,7 +11,7 @@ public class ReturnButton : MonoBehaviour
 
     public AudioSource buttonClickAudioSource;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (buttonClickAudioSource == null)
@@ -25,8 +25,6 @@ public class ReturnButton : MonoBehaviour
         BackUI.SetActive(isBackUIActive);
         isCurrUIActive = !isCurrUIActive; 
         CurrUI.SetActive(isCurrUIActive);
-
-        // Riproduci l'effetto sonoro
         buttonClickAudioSource.Play();
     }
 

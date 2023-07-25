@@ -21,7 +21,7 @@ public class BeeHotelManager : MonoBehaviour
 
     public AudioSource buttonClickAudioSource;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         CloseWindow();
@@ -39,8 +39,7 @@ public class BeeHotelManager : MonoBehaviour
         else
         {
             windowCanvas.SetActive(true);
-            // Riproduci l'effetto sonoro
-            buttonClickAudioSource.Play();
+            buttonClickAudioSource.Play(); //Play the sound effect
         }
 
     }
@@ -49,7 +48,6 @@ public class BeeHotelManager : MonoBehaviour
     public void CloseWindow()
     {
         windowCanvas.SetActive(false);
-        // Riproduci l'effetto sonoro
-        buttonClickAudioSource.Play();
+        buttonClickAudioSource.Play(); //Play the sound effect
     }
 }

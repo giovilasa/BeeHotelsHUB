@@ -35,62 +35,62 @@ public class ActivityNotifications : MonoBehaviour
     {
         if (NotifManager1.activeSelf && Activity1.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif1, "Cercare il nido");
         }
         else if (NotifManager2.activeSelf && Activity1.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif2, "Cercare il nido");
         }
         else if (NotifManager3.activeSelf && Activity1.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif3, "Cercare il nido");
         }
         else if (NotifManager4.activeSelf && Activity1.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif4, "Cercare il nido");
         }
         else if (NotifManager1.activeSelf && Activity2.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif1, "Raccogliere polline");
         }
         else if (NotifManager2.activeSelf && Activity2.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif2, "Raccogliere polline");
         }
         else if (NotifManager3.activeSelf && Activity2.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif3, "Raccogliere polline");
         }
         else if (NotifManager4.activeSelf && Activity2.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif4, "Raccogliere polline");
         }
         else if (NotifManager1.activeSelf && Activity3.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif1, "Raccolta del materiale");
         }
         else if (NotifManager2.activeSelf && Activity3.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif2, "Raccolta del materiale");
         }
         else if (NotifManager3.activeSelf && Activity3.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif3, "Raccolta del materiale");
         }
         else if (NotifManager4.activeSelf && Activity3.activeSelf)
         {
-            Debug.Log(" Bottone Day3 premuto");
+            //Debug.Log(" Bottone Day3 premuto");
             ActivateNotificationAndActivityNotif(ActivityNotif4, "Raccolta del materiale");
         }
         
@@ -103,26 +103,26 @@ public class ActivityNotifications : MonoBehaviour
 
         if (activeNotifManager != null && activityNotif != null)
         {
-            Debug.Log("If che sta sotto ActivateNotification And ActivityNotif");
+            //Debug.Log("If che sta sotto ActivateNotification And ActivityNotif");
             DeactivateAllActivityNotifs();
             activityNotif.SetActive(true);
             ActivateNotificationObject(activityNotif);
         }
 
-        Debug.Log("Replace Activity Notification Text");
+        //Debug.Log("Replace Activity Notification Text");
         ReplaceActivityNotificationText(equippedActivity);
     }
 
     private void ActivateNotificationObject(GameObject notification)
     {
-        Debug.Log("Notifica attivata");
+        //Debug.Log("Notifica attivata");
         notification.SetActive(true);
     }
 
     private void ReplaceActivityNotificationText(string equippedActivity)
     {
-        Debug.Log("Chiamato il metodo GetReplacedText");
-        // Chiamiamo il metodo GetReplacedText utilizzando il parametro ricevuto e impostiamo i testi delle notifiche di attività
+        //Debug.Log("Chiamato il metodo GetReplacedText");
+        // We call the GetReplacedText method using the received parameter and set the activity notification texts
         NotifText5.text = GetReplacedText(NotifText5.text, equippedActivity);
         NotifText6.text = GetReplacedText(NotifText6.text, equippedActivity);
         NotifText7.text = GetReplacedText(NotifText7.text, equippedActivity);

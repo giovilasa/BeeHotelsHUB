@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class RandomTextManager : MonoBehaviour
 {
-    public TextMeshProUGUI phraseText; // Riferimento all'oggetto Text per mostrare la frase
-    public Button[] buttons; // Array di pulsanti che devono attivare la visualizzazione delle frasi
-    public string[] phrases; // Array di frasi
+    public TextMeshProUGUI phraseText; // Reference to the Text object to show the sentence
+    public Button[] buttons; // Array of buttons that must activate the display of the sentences
+    public string[] phrases; // Phrases array
 
     private bool areButtonsActive = false;
 
@@ -42,19 +42,19 @@ public class RandomTextManager : MonoBehaviour
             return;
         }
 
-        // Ottieni una frase casuale
+        // Get a random phrase
         string randomPhrase = GetRandomPhrase();
 
-        // Mostra la frase a schermo
+        // Show the phrase on screen
         phraseText.text = randomPhrase;
     }
 
     private string GetRandomPhrase()
     {
-        // Ottieni un numero casuale come indice per accedere alla frase nella lista
+        // Get a random number as an index to access the phrase in the list
         int randomIndex = Random.Range(0, phrases.Length);
 
-        // Restituisci la frase casuale
+        // Return the random phrase
         return phrases[randomIndex];
     }
 

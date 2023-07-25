@@ -40,13 +40,11 @@ public class NewBeeManager : MonoBehaviour
     public GameObject NotifManager4;
 
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     public void OnButtonClick()
     {
         Debug.Log("New Bee Manager, notifica");
@@ -55,7 +53,7 @@ public class NewBeeManager : MonoBehaviour
         {
             Card1.gameObject.SetActive(false);
             NewCard1.gameObject.SetActive(true);
-            //notificationSystem.ModifyContainerElements(0);  // Passa l'indice 0 per NewCard1
+            //notificationSystem.ModifyContainerElements(0);  // Pass index 0 for NewCard1
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             Manager1.gameObject.SetActive(true);
@@ -67,7 +65,7 @@ public class NewBeeManager : MonoBehaviour
         {
             Card2.gameObject.SetActive(false);
             NewCard2.gameObject.SetActive(true);
-            //notificationSystem.ModifyContainerElements(1);  // Passa l'indice 1 per NewCard2
+            //notificationSystem.ModifyContainerElements(1);  // Pass index 1 for NewCard2
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             Manager2.gameObject.SetActive(true);
@@ -78,7 +76,7 @@ public class NewBeeManager : MonoBehaviour
         {
             Card3.gameObject.SetActive(false);
             NewCard3.gameObject.SetActive(true);
-            //notificationSystem.ModifyContainerElements(2);  // Passa l'indice 2 per NewCard3
+            //notificationSystem.ModifyContainerElements(2);  // Pass index 2 for NewCard3
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             Manager3.gameObject.SetActive(true);
@@ -89,7 +87,7 @@ public class NewBeeManager : MonoBehaviour
         {
             Card4.gameObject.SetActive(false);
             NewCard4.gameObject.SetActive(true);
-            //notificationSystem.ModifyContainerElements(3);  // Passa l'indice 3 per NewCard4
+            //notificationSystem.ModifyContainerElements(3);  // Pass index 3 for NewCard4
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             Manager4.gameObject.SetActive(true);

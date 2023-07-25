@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
     public AudioSource buttonClickAudioSource;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         MainCamera.gameObject.SetActive(false);
@@ -30,7 +30,6 @@ public class StartMenu : MonoBehaviour
     {
         if (isStart)
         {
-            // Riproduci l'effetto sonoro
             buttonClickAudioSource.Play();
             StartCamera.gameObject.SetActive(!StartCamera.gameObject.activeSelf);
             MainCamera.gameObject.SetActive(!MainCamera.gameObject.activeSelf);
