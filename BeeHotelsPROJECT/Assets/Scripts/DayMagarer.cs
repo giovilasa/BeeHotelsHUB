@@ -9,30 +9,35 @@ public class DayMagarer : MonoBehaviour
     public Button[] buttonsToMonitor;
     public GameObject spawnPoint;
 
+    private int buttonsPressedCount = 0;
+
     private void Start()
     {
         foreach (Button button in buttonsToMonitor)
         {
-            button.onClick.AddListener(OnButtonPressed);
+            button.onClick.AddListener(() => OnButtonPressed(button));
         }
     }
 
-    private void OnButtonPressed()
+    private void OnButtonPressed(Button pressedButton)
     {
-        bool allButtonsPressed = true;
-
-        foreach (Button button in buttonsToMonitor)
+        // Verifica se il bottone è già stato premuto
+        if (!pressedButton.interactable)
         {
-            if (!button.interactable)
-            {
-                allButtonsPressed = false;
-                break;
-            }
+            return;
         }
 
-        if (allButtonsPressed)
+        // Incrementa il contatore solo se il bottone non è già stato premuto
+        buttonsPressedCount++;
+
+        // Disabilita il bottone appena premuto
+        pressedButton.interactable = false;
+
+        // Verifica se sono stati premuti tutti i bottoni
+        if (buttonsPressedCount == buttonsToMonitor.Length)
         {
-            spawnPoint.SetActive(true); // Appearance of the object in the scene
+            buttonsPressedCount = 0; // Reimposta il contatore
+            spawnPoint.SetActive(true); // Attiva il punto di spawn
         }
     }
 }

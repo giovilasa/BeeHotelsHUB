@@ -7,7 +7,7 @@ public class LightController : MonoBehaviour
 {
     public float intensityChangeRate = 1.0f;
     public GameObject menu;
-    public Button[] stopButtons;
+    public GameObject[] stopObjects; // Array di oggetti
 
     private Light spotLight;
     private bool increasingIntensity = true;
@@ -16,18 +16,17 @@ public class LightController : MonoBehaviour
     {
         spotLight = GetComponent<Light>();
 
-        // Verifica se ci sono pulsanti nell'array
-        if (stopButtons != null && stopButtons.Length > 0)
+        // Verifica se ci sono oggetti nell'array
+        if (stopObjects != null && stopObjects.Length > 0)
         {
-            // Aggiungi il listener a ciascun pulsante nell'array
-            foreach (Button button in stopButtons)
+            foreach (GameObject stopObject in stopObjects)
             {
-                button.onClick.AddListener(StopButtonClicked);
+                stopObject.SetActive(false); // Assicurati che gli oggetti siano disattivati all'inizio
             }
         }
         else
         {
-            Debug.LogError("L'array di pulsanti Stop è vuoto. Aggiungi almeno un pulsante nell'Inspector.");
+            Debug.LogError("L'array di oggetti Stop è vuoto. Aggiungi almeno un oggetto nell'Inspector.");
         }
 
         InvokeRepeating("ChangeIntensity", 0f, intensityChangeRate);
@@ -65,11 +64,15 @@ public class LightController : MonoBehaviour
             // Se il menu è attivo, imposto l'intensità a 0
             spotLight.intensity = 0.0f;
         }
-    }
 
-    void StopButtonClicked()
-    {
-        // Se uno qualsiasi dei pulsanti "Stop" viene premuto, disattiva lo Spot Light
-        spotLight.enabled = false;
+        // Verifica se uno qualsiasi degli oggetti "Stop" è attivo e disattiva lo Spot Light
+        foreach (GameObject stopObject in stopObjects)
+        {
+            if (stopObject.activeSelf)
+            {
+                spotLight.enabled = false;
+                break;
+            }
+        }
     }
 }
