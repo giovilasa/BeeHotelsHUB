@@ -7,11 +7,15 @@ public class ActivateScroll : MonoBehaviour
 {
     public Scrollbar scrollbar;
     public GameObject scrollArea;
-    public Button activateButton;
+    public Button[] activateButtons;
 
     private void Start()
     {
-        activateButton.onClick.AddListener(OnActivateButtonClick);
+        foreach (Button button in activateButtons)
+        {
+            button.onClick.AddListener(OnActivateButtonClick);
+        }
+
         scrollbar.gameObject.SetActive(false);
         scrollArea.SetActive(false);
     }
@@ -20,6 +24,10 @@ public class ActivateScroll : MonoBehaviour
     {
         scrollbar.gameObject.SetActive(true);
         scrollArea.SetActive(true);
-        activateButton.gameObject.SetActive(false);
+
+        foreach (Button button in activateButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
     }
 }

@@ -5,78 +5,27 @@ using UnityEngine.UI;
 
 public class WindowRestaurantManager : MonoBehaviour
 {
-    public GameObject windowCanvas;
-    public GameObject falseRestaurant;
-    public GameObject trueRestaurant;
+    public GameObject window;
+    public GameObject message;
+    public GameObject takeButton;
 
-    public Button buttonToMonitor;
-
-    public Button additionalButton;
-    public Button day3Button;
-    public GameObject waitingObject;
-
-    public GameObject newWindow;
-
-    public GameObject beeMessage;
-    private bool beeMessageActivated = false;
+    private bool isFirstClick = true;
 
     public AudioSource buttonClickAudioSource;
 
 
-    private void Start()
-    {
-        //Debug.Log("Il metodo Start del Ristorante è stato chiamato.");
-        trueRestaurant.gameObject.SetActive(false);
-        falseRestaurant.gameObject.SetActive(true);
-        waitingObject.SetActive(false);
-        newWindow.SetActive(false);
-
-        buttonToMonitor.onClick.AddListener(OnButtonPressed);
-
-        additionalButton.onClick.AddListener(OnAdditionalButtonPressed);
-        day3Button.onClick.AddListener(OnDay3ButtonPressed);
-    }
-
-    private void OnButtonPressed()
-    {
-        //Debug.Log("Il pulsante monitorato è stato premuto");
-
-        trueRestaurant.SetActive(true);
-        falseRestaurant.SetActive(false);
-    }
-
     public void OnMouseDown()
     {
-        if (!beeMessageActivated)
+        if (isFirstClick)
         {
-            beeMessageActivated = true;
-            beeMessage.SetActive(true); // Activate the beeMessage object
-            windowCanvas.SetActive(false);
+            message.SetActive(true);
+            isFirstClick = false;
         }
         else
         {
-            windowCanvas.SetActive(true);
+            window.SetActive(true);
             buttonClickAudioSource.Play();
+            takeButton.SetActive(true);
         }
-    }
-
-
-    private void OnAdditionalButtonPressed()
-    {
-        additionalButton.gameObject.SetActive(false);
-        waitingObject.SetActive(true);
-        newWindow.SetActive(true);
-
-    }
-
-    private void OnDay3ButtonPressed()
-    {
-        additionalButton.gameObject.SetActive(true);
-        waitingObject.SetActive(false);
-    }
-
-    public void CloseWindow()
-    {
-        windowCanvas.SetActive(false);
     }
 }

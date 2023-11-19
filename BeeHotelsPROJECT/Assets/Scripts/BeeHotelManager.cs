@@ -8,19 +8,16 @@ public class BeeHotelManager : MonoBehaviour
     public GameObject windowCanvas;
     public GameObject beeMessage;
     private bool beeMessageActivated = false;
-
-    public GameObject Card1;
-    public GameObject Card2;
-    public GameObject Card3;
-    public GameObject Card4;
-
-    public GameObject NewCard1;
-    public GameObject NewCard2;
-    public GameObject NewCard3;
-    public GameObject NewCard4;
-
     public AudioSource buttonClickAudioSource;
 
+    //public GameObject Card1;
+    //public GameObject Card2;
+    //public GameObject Card3;
+    //public GameObject Card4;
+    //public GameObject NewCard1;
+    //public GameObject NewCard2;
+    //public GameObject NewCard3;
+    //public GameObject NewCard4;
 
     void Start()
     {

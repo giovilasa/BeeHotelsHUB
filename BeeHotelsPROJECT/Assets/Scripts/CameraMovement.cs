@@ -42,10 +42,14 @@ public class CameraMovement : MonoBehaviour
         {
             isMovingCamera = true;
             lastMousePosition = Input.mousePosition;
+
+            Debug.Log("Camera movement started");
         }
         else if (Input.GetMouseButtonUp(1))
         {
             isMovingCamera = false;
+
+            Debug.Log("Camera movement stopped");
         }
 
         if (isMovingCamera && !shouldBlockMovement)
@@ -59,6 +63,8 @@ public class CameraMovement : MonoBehaviour
             transform.position = newPosition;
 
             lastMousePosition = Input.mousePosition;
+
+            Debug.Log("Camera is moving");
         }
 
         // Camera movement along the Y axis
@@ -69,6 +75,8 @@ public class CameraMovement : MonoBehaviour
             Vector3 newYPosition = transform.position + scrollMovement;
             newYPosition.y = Mathf.Clamp(newYPosition.y, minBounds.y, maxBounds.y);
             transform.position = newYPosition;
+
+            Debug.Log("Camera zooming");
         }
     }
 }
