@@ -7,117 +7,119 @@ public class ImageVisibilityHandler : MonoBehaviour
 {
     public Scrollbar scrollbar;
     public GameObject[] images;
-    public Button[] buttonsA; // Bottoni "A"
-    public Button[] buttonsD; // Bottoni "D"
-
+    public Button[] disableButtons;
+    public Button[] newButtons;
     private int imageCount;
-    private List<int> visibleImageIndices = new List<int>(); // Lista degli indici delle immagini visibili
+    private List<int> activeImageIndices = new List<int>();
+
 
     private void Start()
     {
         imageCount = images.Length;
         scrollbar.onValueChanged.AddListener(OnScrollValueChanged);
 
-        // Aggiunge listener a ciascun bottone "A"
-        foreach (Button button in buttonsA)
+        // Aggiunge listener a ciascun bottone per disabilitare le immagini
+        foreach (Button button in disableButtons)
         {
-            button.onClick.AddListener(() => OnButtonAClick(button));
+            button.onClick.AddListener(() => OnButtonClick(button));
         }
 
-        // Aggiunge listener a ciascun bottone "D"
-        foreach (Button button in buttonsD)
+        // Aggiunge listener a ciascun nuovo bottone
+        foreach (Button button in newButtons)
         {
-            button.onClick.AddListener(() => OnButtonDClick(button));
+            button.onClick.AddListener(() => OnNewButtonClick(button));
+        }
+
+        // Disabilita tutte le immagini all'inizio
+        DisableAllImages();
+    }
+
+    private void OnButtonClick(Button clickedButton)
+    {
+        int buttonIndex = System.Array.IndexOf(disableButtons, clickedButton);
+        if (buttonIndex >= 0 && buttonIndex < imageCount)
+        {
+            ToggleImageActivation(buttonIndex);
         }
     }
 
-    private void OnButtonAClick(Button clickedButton)
+    private void OnNewButtonClick(Button clickedButton)
     {
-        // Trova l'indice del pulsante "A" cliccato nell'array di pulsanti "A"
-        int buttonIndex = System.Array.IndexOf(buttonsA, clickedButton);
-
-        // Se l'indice è valido, gestisce il comportamento
+        int buttonIndex = System.Array.IndexOf(newButtons, clickedButton);
         if (buttonIndex >= 0 && buttonIndex < imageCount)
         {
-            // Aggiunge o rimuove l'indice dall'elenco delle immagini visibili
-            if (visibleImageIndices.Contains(buttonIndex))
-            {
-                visibleImageIndices.Remove(buttonIndex);
-            }
-            else
-            {
-                visibleImageIndices.Add(buttonIndex);
-            }
-
-            UpdateVisibleImages();
+            ToggleImageActivation(buttonIndex);
         }
     }
 
-    private void OnButtonDClick(Button clickedButton)
+    private void ToggleImageActivation(int buttonIndex)
     {
-        // Trova l'indice del pulsante "D" cliccato nell'array di pulsanti "D"
-        int buttonIndex = System.Array.IndexOf(buttonsD, clickedButton);
-
-        // Se l'indice è valido, gestisce il comportamento
-        if (buttonIndex >= 0 && buttonIndex < imageCount)
+        if (activeImageIndices.Contains(buttonIndex))
         {
-            // Nasconde l'immagine associata al pulsante "D" cliccato
-            visibleImageIndices.Remove(buttonIndex);
-            UpdateVisibleImages();
+            activeImageIndices.Remove(buttonIndex);
         }
+        else
+        {
+            activeImageIndices.Add(buttonIndex);
+        }
+
+        UpdateActiveImages();
     }
 
     private void OnScrollValueChanged(float scrollValue)
     {
-        int imageIndex = Mathf.FloorToInt(scrollValue * (imageCount - 1));
+        int imageIndex = Mathf.RoundToInt(scrollValue * (imageCount - 1));
         SetActiveImage(imageIndex);
     }
 
     private void SetActiveImage(int imageIndex)
     {
-        // Verifica se l'immagine corrente è tra quelle visibili
-        if (visibleImageIndices.Contains(imageIndex))
+        if (activeImageIndices.Contains(imageIndex))
         {
-            for (int i = 0; i < imageCount; i++)
-            {
-                images[i].SetActive(i == imageIndex);
-            }
+            images[imageIndex].SetActive(true);
+        }
+        else
+        {
+            images[imageIndex].SetActive(false);
         }
     }
 
-    private void UpdateVisibleImages()
+    private void UpdateActiveImages()
     {
-        // Ricava l'indice corrente dalla scrollbar
         float scrollValue = scrollbar.value;
         int imageIndex = Mathf.FloorToInt(scrollValue * (imageCount - 1));
 
-        // Verifica se l'immagine corrente è tra quelle non visibili
-        if (!visibleImageIndices.Contains(imageIndex))
+        // Cerca la prima immagine attiva prima di quella corrente
+        for (int i = imageIndex; i >= 0; i--)
         {
-            // Cerca la prima immagine visibile prima di quella corrente
-            for (int i = imageIndex - 1; i >= 0; i--)
+            if (!activeImageIndices.Contains(i))
             {
-                if (visibleImageIndices.Contains(i))
+                imageIndex = i;
+                break;
+            }
+        }
+
+        // Se non ci sono immagini attive prima di quella corrente, cerca la prima immagine attiva dopo di essa
+        if (activeImageIndices.Contains(imageIndex))
+        {
+            for (int i = imageIndex + 1; i < imageCount; i++)
+            {
+                if (!activeImageIndices.Contains(i))
                 {
                     imageIndex = i;
                     break;
                 }
             }
-
-            // Se non ci sono immagini visibili prima di quella corrente, cerca la prima immagine visibile dopo di essa
-            if (!visibleImageIndices.Contains(imageIndex))
-            {
-                for (int i = imageIndex + 1; i < imageCount; i++)
-                {
-                    if (visibleImageIndices.Contains(i))
-                    {
-                        imageIndex = i;
-                        break;
-                    }
-                }
-            }
         }
 
         SetActiveImage(imageIndex);
+    }
+
+    private void DisableAllImages()
+    {
+        foreach (var image in images)
+        {
+            image.SetActive(false);
+        }
     }
 }
