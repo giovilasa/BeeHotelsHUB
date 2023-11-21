@@ -52,6 +52,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement1.SetActive(true);
         newCard1.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 1");
     }
 
     public void OnMouseDown2()
@@ -61,6 +62,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement2.SetActive(true);
         newCard2.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 2");
     }
 
     public void OnMouseDown3()
@@ -70,6 +72,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement3.SetActive(true);
         newCard3.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 3");
     }
 
     public void OnMouseDown4()
@@ -79,6 +82,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement4.SetActive(true);
         newCard4.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 4");
     }
 
     public void OnMouseDown5()
@@ -88,6 +92,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement5.SetActive(true);
         newCard5.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 5");
     }
 
     public void OnMouseDown6()
@@ -97,6 +102,7 @@ public class ActivateCards : MonoBehaviour
         reinforcement6.SetActive(true);
         newCard6.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 6");
     }
 
     public void OnMouseDown7()
@@ -106,5 +112,6 @@ public class ActivateCards : MonoBehaviour
         reinforcement7.SetActive(true);
         newCard7.SetActive(true);
         buttonClickAudioSource.Play();
+        //Debug.Log("Reinforcement 7");
     }
 }
