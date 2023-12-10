@@ -64,7 +64,7 @@ public class CameraMovement : MonoBehaviour
 
             lastMousePosition = Input.mousePosition;
 
-            Debug.Log("Camera is moving");
+            //Debug.Log("Camera is moving");
         }
 
         // Camera movement along the Y axis
@@ -76,7 +76,7 @@ public class CameraMovement : MonoBehaviour
             newYPosition.y = Mathf.Clamp(newYPosition.y, minBounds.y, maxBounds.y);
             transform.position = newYPosition;
 
-            Debug.Log("Camera zooming");
+            //Debug.Log("Camera zooming");
         }
     }
 }
