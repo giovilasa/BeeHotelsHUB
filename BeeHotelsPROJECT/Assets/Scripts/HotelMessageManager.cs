@@ -2,40 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class HotelMessageManager : MonoBehaviour
 {
-    public Button[] buttons; // Array di bottoni
-    public GameObject spawnPoint; // Punto di spawn
+    public GameObject messageObject; // Riferimento all'oggetto "Message"
+    public GameObject[] objectsToActivate; // Array di oggetti da attivare
+    private bool activated = false;
 
-    private bool isSpawnPointActivated; // Flag per verificare se il punto di spawn è stato attivato
+    public List<GameObject> managers1;
+    public List<GameObject> managers2;
+    public List<GameObject> managers3;
+    public List<GameObject> managers4;
 
-    private void Start()
+    public GameObject bee1;
+    public GameObject bee2;
+    public GameObject bee3;
+    public GameObject bee4;
+
+
+    private void Update()
     {
-        isSpawnPointActivated = false;
-
-        // Aggiungi un listener per ogni pulsante
-        for (int i = 0; i < buttons.Length; i++)
+        // Se l'oggetto "Message" non è ancora stato attivato e almeno uno degli oggetti da attivare è attivo
+        if (!activated && CheckObjectsToActivate())
         {
-            int buttonIndex = i; // Evita la chiusura imprevista
-            buttons[i].onClick.AddListener(() => OnButtonClick(buttonIndex));
+            ActivateMessage();
         }
     }
 
-    private void OnButtonClick(int buttonIndex)
+    private bool CheckObjectsToActivate()
     {
-        // Verifica se il punto di spawn è già stato attivato
-        if (!isSpawnPointActivated)
+        foreach (GameObject obj in objectsToActivate)
         {
-            // Attiva il punto di spawn
-            spawnPoint.SetActive(true);
-            isSpawnPointActivated = true;
-
-            Debug.Log("SpawnPoint attivato!");
+            // Se almeno un oggetto da attivare è attivo, restituisci true
+            if (obj != null && obj.activeSelf)
+            {
+                return true;
+            }
         }
-        else
+        return false;
+    }
+
+    private void ActivateMessage()
+    {
+        // Attiva l'oggetto "Message"
+        if (messageObject != null)
         {
-            Debug.Log("SpawnPoint già attivato. Non può essere attivato nuovamente.");
+            messageObject.SetActive(true);
+
+            // Attiva i Bee in base all'attivazione dei manager nelle rispettive liste
+            ActivateBeeList(managers1, bee1);
+            ActivateBeeList(managers2, bee2);
+            ActivateBeeList(managers3, bee3);
+            ActivateBeeList(managers4, bee4);
+
+            // Disattiva questo script dopo aver attivato l'oggetto "Message"
+            enabled = false;
+            activated = true;
+        }
+    }
+
+    private void ActivateBeeList(List<GameObject> managers, GameObject bee)
+    {
+        // Attiva il Bee se almeno uno dei manager nella lista è attivo
+        if (managers != null && managers.Any(manager => manager != null && manager.activeSelf) && bee != null)
+        {
+            bee.SetActive(true);
         }
     }
 }
