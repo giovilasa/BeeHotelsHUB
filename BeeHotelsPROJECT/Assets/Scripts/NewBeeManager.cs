@@ -79,7 +79,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             //Manager1.gameObject.SetActive(true);
-            NotifManager1.gameObject.SetActive(true);
+            //NotifManager1.gameObject.SetActive(true);
         }
 
         else if (Hotel1Card2.activeSelf)
@@ -89,7 +89,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             //Manager2.gameObject.SetActive(true);
-            NotifManager2.gameObject.SetActive(true);
+            //NotifManager2.gameObject.SetActive(true);
         }
 
         else if (Hotel1Card3.activeSelf)
@@ -99,7 +99,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             //Manager3.gameObject.SetActive(true);
-            NotifManager3.gameObject.SetActive(true);
+            //NotifManager3.gameObject.SetActive(true);
         }
 
         else if (Hotel1Card4.activeSelf)
@@ -109,7 +109,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             //Manager4.gameObject.SetActive(true);
-            NotifManager4.gameObject.SetActive(true);
+            //NotifManager4.gameObject.SetActive(true);
         }
     }
 
@@ -124,7 +124,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             //Manager1.gameObject.SetActive(true);
-            NotifManager1.gameObject.SetActive(true);
+            //NotifManager1.gameObject.SetActive(true);
         }
 
         else if (Hotel2Card2.activeSelf)
@@ -134,7 +134,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             //Manager2.gameObject.SetActive(true);
-            NotifManager2.gameObject.SetActive(true);
+            //NotifManager2.gameObject.SetActive(true);
         }
 
         else if (Hotel2Card3.activeSelf)
@@ -144,7 +144,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             //Manager3.gameObject.SetActive(true);
-            NotifManager3.gameObject.SetActive(true);
+            //NotifManager3.gameObject.SetActive(true);
         }
 
         else if (Hotel2Card4.activeSelf)
@@ -154,7 +154,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             //Manager4.gameObject.SetActive(true);
-            NotifManager4.gameObject.SetActive(true);
+            //NotifManager4.gameObject.SetActive(true);
         }
     }
 
@@ -169,7 +169,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             //Manager1.gameObject.SetActive(true);
-            NotifManager1.gameObject.SetActive(true);
+            //NotifManager1.gameObject.SetActive(true);
         }
 
         else if (Hotel3Card2.activeSelf)
@@ -179,7 +179,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             //Manager2.gameObject.SetActive(true);
-            NotifManager2.gameObject.SetActive(true);
+            //NotifManager2.gameObject.SetActive(true);
         }
 
         else if (Hotel3Card3.activeSelf)
@@ -189,7 +189,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             //Manager3.gameObject.SetActive(true);
-            NotifManager3.gameObject.SetActive(true);
+            //NotifManager3.gameObject.SetActive(true);
         }
 
         else if (Hotel3Card4.activeSelf)
@@ -199,7 +199,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             //Manager4.gameObject.SetActive(true);
-            NotifManager4.gameObject.SetActive(true);
+            //NotifManager4.gameObject.SetActive(true);
         }
     }
 
@@ -214,7 +214,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket1.gameObject.SetActive(false);
             Ticket_Manager1.gameObject.SetActive(true);
             //Manager1.gameObject.SetActive(true);
-            NotifManager1.gameObject.SetActive(true);
+            //NotifManager1.gameObject.SetActive(true);
         }
 
         else if (Hotel4Card2.activeSelf)
@@ -224,7 +224,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket2.gameObject.SetActive(false);
             Ticket_Manager2.gameObject.SetActive(true);
             //Manager2.gameObject.SetActive(true);
-            NotifManager2.gameObject.SetActive(true);
+            //NotifManager2.gameObject.SetActive(true);
         }
 
         else if (Hotel4Card3.activeSelf)
@@ -234,7 +234,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket3.gameObject.SetActive(false);
             Ticket_Manager3.gameObject.SetActive(true);
             //Manager3.gameObject.SetActive(true);
-            NotifManager3.gameObject.SetActive(true);
+            //NotifManager3.gameObject.SetActive(true);
         }
 
         else if (Hotel4Card4.activeSelf)
@@ -244,7 +244,7 @@ public class NewBeeManager : MonoBehaviour
             Ticket4.gameObject.SetActive(false);
             Ticket_Manager4.gameObject.SetActive(true);
             //Manager4.gameObject.SetActive(true);
-            NotifManager4.gameObject.SetActive(true);
+            //NotifManager4.gameObject.SetActive(true);
         }
     }
 
